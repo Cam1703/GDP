@@ -7,17 +7,30 @@ public class UnitHealth
     private int _currentMaxHealth;
 
     //Properties  
-    public int Health
+    public int MaxHealth
     { 
         get 
         { 
-            return _currentHealth; 
+            return _currentMaxHealth;
         } 
         
         set 
-        { 
-            _currentHealth = value;
+        {
+            _currentMaxHealth = value;
         } 
+    }
+
+    public int Health
+    {
+        get
+        {
+            return _currentHealth;
+        }
+
+        set
+        {
+            _currentHealth = value;
+        }
     }
 
     // Constructor

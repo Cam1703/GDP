@@ -1,11 +1,26 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerInteractions : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    public Image[] hearts;
+    public Sprite filledHeart;
+    public Sprite emptyHeart;
+
     void Start()
     {
-        
+        for (int i = 0; i < hearts.Length; i++)
+        {
+            if (i < GameManager.gameManager._playerHealth.MaxHealth)
+            {
+                hearts[i].enabled = true;
+            }
+            else
+            {
+                hearts[i].enabled = false;
+            }
+        }
     }
 
     // Update is called once per frame
@@ -26,10 +41,18 @@ public class PlayerInteractions : MonoBehaviour
     private void PlayerTakesDmg(int dmg)
     {
         GameManager.gameManager._playerHealth.DmgUnit(dmg);
+        for (int i = 0; i < dmg; i++)
+        {
+            hearts[GameManager.gameManager._playerHealth.Health - i].sprite = emptyHeart;
+        }
     }
 
     private void PlayerHeals(int healing)
     {
         GameManager.gameManager._playerHealth.HealUnit(healing);
+        for (int i = healing; i > 0 ; i--)
+        {
+            hearts[GameManager.gameManager._playerHealth.Health - i].sprite = filledHeart;
+        }
     }
 }

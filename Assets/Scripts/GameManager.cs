@@ -5,7 +5,9 @@ public class GameManager : MonoBehaviour
 
     public static GameManager gameManager {  get; private set; }
 
-    public UnitHealth _playerHealth = new UnitHealth(3,3);
+    public static int _maxInitialHealth = 3;
+
+    public UnitHealth _playerHealth = new UnitHealth(_maxInitialHealth, _maxInitialHealth);
 
     void Awake()
     {

@@ -9,6 +9,10 @@ public class PlayerInteractions : MonoBehaviour
         {
             PlayerTakesDmg(1);
         }
+        if (collision.gameObject.CompareTag("Healer"))
+        {
+            PlayerHeals(1);
+        }
     }
 
     private void PlayerTakesDmg(int dmg)

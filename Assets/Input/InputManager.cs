@@ -5,11 +5,11 @@ public class InputManager : MonoBehaviour
 {
 
     public static Vector2 _movement;
-    public static float _attack;
+    public static bool _attack;
 
     private PlayerInput _playerInput;
     private InputAction _moveAction;
-    private InputAction _attackAction;
+    public InputAction _attackAction;
 
     private void Awake()
     {
@@ -21,6 +21,6 @@ public class InputManager : MonoBehaviour
     private void Update()
     {
         _movement = _moveAction.ReadValue<Vector2>();
-        _attack = _attackAction.ReadValue<float>();
+        _attack = _attackAction.triggered;
     }
 }

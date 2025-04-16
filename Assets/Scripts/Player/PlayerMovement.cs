@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        _movement.Set(InputManager.Movement.x, InputManager.Movement.y);
+        _movement.Set(InputManager._movement.x, InputManager._movement.y);
         _rb.linearVelocity = _movement * _movespeed;
     }
 }

@@ -4,23 +4,35 @@ using UnityEngine.InputSystem;
 public class InputManager : MonoBehaviour
 {
 
-    public static Vector2 _movement;
-    public static bool _attack;
+    public static Vector2 movement;
+    public static bool attack;
 
-    private PlayerInput _playerInput;
+    public static bool menuOpenInput;
+    public static bool menuCloseInput;
+
+    public static PlayerInput playerInput;
     private InputAction _moveAction;
     private InputAction _attackAction;
 
+    private InputAction _menuOpenAction;
+    private InputAction _menuCloseAction;
+
     private void Awake()
     {
-        _playerInput = GetComponent<PlayerInput>();
-        _moveAction = _playerInput.actions["Move"];
-        _attackAction = _playerInput.actions["Attack"];
+        playerInput = GetComponent<PlayerInput>();
+        _moveAction = playerInput.actions["Move"];
+        _attackAction = playerInput.actions["Attack"];
+
+        _menuOpenAction = playerInput.actions["MenuOPEN"];
+        _menuCloseAction = playerInput.actions["MenuCLOSE"];
     }
 
     private void Update()
     {
-        _movement = _moveAction.ReadValue<Vector2>();
-        _attack = _attackAction.triggered;
+        movement = _moveAction.ReadValue<Vector2>();
+        attack = _attackAction.WasPerformedThisFrame();
+
+        menuOpenInput = _menuOpenAction.WasPerformedThisFrame();
+        menuCloseInput = _menuCloseAction.WasPerformedThisFrame();
     }
 }

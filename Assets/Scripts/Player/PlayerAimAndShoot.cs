@@ -31,7 +31,7 @@ public class PlayerAimAndShoot : MonoBehaviour
 
     private void GunShooting()
     {
-        if (InputManager._attack)
+        if (InputManager.attack)
         {
             _bulletInst = Instantiate(_bullet, _bulletSpawnPoint.position, _gun.transform.rotation);
         }    

@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class PauseManager : MonoBehaviour
 {
+
     public static PauseManager instance;
 
     public bool isPaused;

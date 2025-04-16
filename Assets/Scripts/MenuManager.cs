@@ -2,9 +2,14 @@ using UnityEngine;
 
 public class MenuManager : MonoBehaviour
 {
+    [SerializeField] private GameObject _pauseMenu;
 
-    
-    void Update()
+    private void Start()
+    {
+        _pauseMenu.SetActive(false);
+    }
+
+    private void Update()
     {
         if (InputManager.menuOpenInput)
         {
@@ -22,11 +27,13 @@ public class MenuManager : MonoBehaviour
     public void Pause() 
     {
         PauseManager.instance.PauseGame();
+        _pauseMenu.SetActive(true);
     }
 
 
     public void Unpause()
     {
         PauseManager.instance.UnpauseGame();
+        _pauseMenu.SetActive(false);
     }
 }

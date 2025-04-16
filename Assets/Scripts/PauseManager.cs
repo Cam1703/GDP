@@ -29,4 +29,10 @@ public class PauseManager : MonoBehaviour
         Time.timeScale = 1f;
         InputManager.playerInput.SwitchCurrentActionMap("Player");
     }
+
+    public void FinishGame()
+    {
+        PauseGame();
+        InputManager.playerInput.SwitchCurrentActionMap("ExitMenu");
+    }
 }

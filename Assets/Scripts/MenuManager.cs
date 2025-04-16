@@ -3,15 +3,20 @@ using UnityEngine;
 public class MenuManager : MonoBehaviour
 {
     [SerializeField] private GameObject _pauseMenu;
+    [SerializeField] private GameObject _finishMenu;
 
     private void Start()
     {
         _pauseMenu.SetActive(false);
+        _finishMenu.SetActive(false);
     }
 
     private void Update()
     {
-        if (InputManager.menuOpenInput)
+        if (GameManager.gameManager._playerHealth.Health == 0) {
+            Finish();
+        }
+        else  if (InputManager.menuOpenInput)
         {
             if (!PauseManager.instance.isPaused)
             {
@@ -35,5 +40,12 @@ public class MenuManager : MonoBehaviour
     {
         PauseManager.instance.UnpauseGame();
         _pauseMenu.SetActive(false);
+    }
+
+    public void Finish()
+    {
+        PauseManager.instance.FinishGame();
+        _pauseMenu.SetActive(false);
+        _finishMenu.SetActive(true);
     }
 }

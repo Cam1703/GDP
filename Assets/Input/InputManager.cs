@@ -9,7 +9,7 @@ public class InputManager : MonoBehaviour
 
     private PlayerInput _playerInput;
     private InputAction _moveAction;
-    public InputAction _attackAction;
+    private InputAction _attackAction;
 
     private void Awake()
     {

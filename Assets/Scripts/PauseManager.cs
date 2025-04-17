@@ -6,7 +6,7 @@ public class PauseManager : MonoBehaviour
 
     public static PauseManager instance;
 
-    public bool isPaused;
+    public bool isPaused = true;
 
     private void Awake()
     {

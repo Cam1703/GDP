@@ -42,6 +42,7 @@ public class MenuManager : MonoBehaviour
 
     public void Begin()
     {
+        PauseManager.instance.isPaused = false;
         _hasStarted = true;
         _startMenu.SetActive(false);
         _game.SetActive(true);

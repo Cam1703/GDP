@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
     public static GameManager gameManager {  get; private set; }
 
     [SerializeField] public static int _maxInitialHealth = 3;
+    
     public string playerName = "";
 
     public UnitHealth _playerHealth = new UnitHealth(_maxInitialHealth, _maxInitialHealth);

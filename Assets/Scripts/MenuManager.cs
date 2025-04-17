@@ -8,6 +8,7 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private GameObject _finishMenu;
 
     private bool _hasStarted = false;
+    private bool _hasFinished = false;
 
     private void Start()
     {
@@ -64,6 +65,12 @@ public class MenuManager : MonoBehaviour
     {
         PauseManager.instance.FinishGame();
         _pauseMenu.SetActive(false);
+        _game.SetActive(false);
         _finishMenu.SetActive(true);
+        if (!_hasFinished)
+        {
+            LeaderboardManager.instance.Leaderboard();
+            _hasFinished = true;
+        }
     }
 }

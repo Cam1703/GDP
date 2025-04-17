@@ -42,8 +42,6 @@ public class LeaderboardManager : MonoBehaviour
         else {
             _jsonScores = JsonUtility.FromJson<HighScoresList>(_jsonString);
         }
-        Debug.Log(_jsonString);
-
 
         _jsonList = _jsonScores.highScores;
         _jsonList.Add(_newEntry);
@@ -64,7 +62,7 @@ public class LeaderboardManager : MonoBehaviour
         //Capping to 10 elements
         if (_jsonList.Count > 10)
         {
-            _jsonList.GetRange(0,10);
+            _jsonList = _jsonList.GetRange(0,10);
         }
 
         //Showing the values
@@ -87,14 +85,13 @@ public class LeaderboardManager : MonoBehaviour
             _entryTransform.gameObject.SetActive(true);
 
             _entryTransform.Find("PositionTemplate").GetComponent<Text>().text = _rankString;
-            _entryTransform.Find("ScoreTemplate").GetComponent<Text>().text = (_jsonList[i].score.ToString("F2"));
+            _entryTransform.Find("ScoreTemplate").GetComponent<Text>().text = (_jsonList[i].score.ToString("F3"));
             _entryTransform.Find("NameTemplate").GetComponent<Text>().text = _jsonList[i].id;
         }
         _jsonScores = new HighScoresList{highScores=_jsonList };
         
         //Saving the new leaderboard
         _jsonString = JsonUtility.ToJson(_jsonScores);
-        Debug.Log(_jsonString);
         PlayerPrefs.SetString("leaderboard", _jsonString);
         PlayerPrefs.Save();
     }

@@ -13,6 +13,6 @@ public class PlayerStats : MonoBehaviour
         {
             GameManager.gameManager.playerScore += Time.deltaTime;
         }
-        _score.text = ("Score: " + GameManager.gameManager.playerScore.ToString("F1")) + " s";
+        _score.text = ("Score: " + GameManager.gameManager.playerScore.ToString("F3")) + " s";
     }
 }

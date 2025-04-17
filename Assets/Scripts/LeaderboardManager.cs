@@ -4,7 +4,6 @@ using System.Collections.Generic;
 
 public class LeaderboardManager : MonoBehaviour
 {
-    [SerializeField] public string _filename;
 
     [SerializeField] private Canvas _entryContainer;
     [SerializeField] private Canvas _entryTemplate;

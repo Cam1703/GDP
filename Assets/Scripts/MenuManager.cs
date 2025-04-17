@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
@@ -7,8 +6,6 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private GameObject _game;
     [SerializeField] private GameObject _pauseMenu;
     [SerializeField] private GameObject _finishMenu;
-
-    [SerializeField] private Text _textContainer;
 
     private bool _hasStarted = false;
 
@@ -48,8 +45,6 @@ public class MenuManager : MonoBehaviour
         _hasStarted = true;
         _startMenu.SetActive(false);
         _game.SetActive(true);
-        _textContainer.text = "Player: " + GameManager.gameManager.playerName;
-
     }
 
     public void Pause() 

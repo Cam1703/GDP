@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] public static int _maxInitialHealth = 3;
     
     public string playerName = "";
+    public float playerScore = 0f;
 
     public UnitHealth _playerHealth = new UnitHealth(_maxInitialHealth, _maxInitialHealth);
 

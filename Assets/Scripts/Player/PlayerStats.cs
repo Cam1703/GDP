@@ -1,16 +1,15 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField] private Text _name;
+    [SerializeField] private Text _score;
 
-    // Update is called once per frame
-    void Update()
+    public void Update()
     {
-        
+        Debug.Log("Player: " + GameManager.gameManager.playerName);
+
+        _name.text = ("Player: " + GameManager.gameManager.playerName);
     }
 }

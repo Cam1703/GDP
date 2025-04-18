@@ -17,20 +17,18 @@ public class BulletBehavior : MonoBehaviour
         SetStraightVelocity();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision) // Corrected signature
     {
-        if((_whatDestroysBullet.value & (1 << collision.gameObject.layer))>0)
-        { 
-            //Damage enemy
-
-            //Destroy bullet
+       if(collision.collider.tag == "Enemy")
+       {
             Destroy(gameObject);
-        }
+       }
+ 
     }
 
     private void SetStraightVelocity()
     {
-        _rb.linearVelocity = transform.right * _bulletVelocity;
+        _rb.linearVelocity = transform.right * _bulletVelocity; // Corrected property name
     }
 
     private void SetDestroyTime()

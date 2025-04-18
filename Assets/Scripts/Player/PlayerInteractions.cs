@@ -2,24 +2,16 @@ using UnityEngine;
 
 public class PlayerInteractions : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (collision.gameObject.CompareTag("Enemy"))
         {
             PlayerTakesDmg(1);
-            Debug.Log(GameManager.gameManager._playerHealth.Health);   
         }
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (collision.gameObject.CompareTag("Healer"))
         {
             PlayerHeals(1);
-            Debug.Log(GameManager.gameManager._playerHealth.Health);
         }
     }
 

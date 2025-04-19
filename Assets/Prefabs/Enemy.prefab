@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7703890063000117944}
   - component: {fileID: 7457077252469926602}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Isometric Diamond
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 6190035080467702382}
   - component: {fileID: 4560310620616033972}
   - component: {fileID: 7001844854428428821}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}

@@ -2817,8 +2817,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1680798453}
   - component: {fileID: 1680798455}
-  - component: {fileID: 1680798454}
   - component: {fileID: 1680798456}
+  - component: {fileID: 1680798454}
   m_Layer: 8
   m_Name: EnemyDummy
   m_TagString: Enemy

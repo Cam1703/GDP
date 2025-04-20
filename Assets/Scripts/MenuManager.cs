@@ -7,7 +7,16 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private GameObject _game;
     [SerializeField] private GameObject _pauseMenu;
 
-    private bool _hasStarted = false;
+    public static MenuManager instance;
+    public bool _hasStarted = false;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+    }
 
     private void Start()
     {
@@ -18,30 +27,29 @@ public class MenuManager : MonoBehaviour
 
     private void Update()
     {
-        if ((!_hasStarted) & GameManager.gameManager.playerName != "")
+        if (_hasStarted)
         {
-            Begin();
-        }
-        if (GameManager.gameManager._playerHealth.Health == 0)
-        {
-            Finish();
-        }
-        else if (InputManager.menuOpenInput)
-        {
-            if (!PauseManager.instance.isPaused)
+            if (GameManager.gameManager._playerHealth.Health == 0)
             {
-                Pause();
+                Finish();
             }
-        }
-        else if (InputManager.menuCloseInput)
-        {
-            Unpause();
+            else if (InputManager.menuOpenInput)
+            {
+                if (!PauseManager.instance.isPaused)
+                {
+                    Pause();
+                }
+            }
+            else if (InputManager.menuCloseInput)
+            {
+                Unpause();
+            }
         }
     }
 
     public void Begin()
     {
-        PauseManager.instance.isPaused = false;
+        PauseManager.instance.UnpauseGame();
         _hasStarted = true;
         _startMenu.SetActive(false);
         _game.SetActive(true);

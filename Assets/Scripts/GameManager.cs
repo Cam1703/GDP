@@ -10,6 +10,9 @@ public class GameManager : MonoBehaviour
     public string playerName = "";
     public float playerScore = 0f;
 
+    public static string finalName;
+    public static float finalScore;
+
     public UnitHealth _playerHealth = new UnitHealth(_maxInitialHealth, _maxInitialHealth);
 
     void Awake()

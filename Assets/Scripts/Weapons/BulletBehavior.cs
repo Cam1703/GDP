@@ -17,13 +17,15 @@ public class BulletBehavior : MonoBehaviour
         SetStraightVelocity();
     }
 
-    private void OnCollisionEnter2D(Collision2D collision) // Corrected signature
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-       if(collision.collider.tag == "Enemy")
-       {
+        if ((_whatDestroysBullet.value & (1 << collision.gameObject.layer)) > 0)
+        {
+            //Damage enemy
+
+            //Destroy bullet
             Destroy(gameObject);
-       }
- 
+        }
     }
 
     private void SetStraightVelocity()

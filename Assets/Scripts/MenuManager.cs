@@ -1,21 +1,19 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
     [SerializeField] private GameObject _startMenu;
     [SerializeField] private GameObject _game;
     [SerializeField] private GameObject _pauseMenu;
-    [SerializeField] private GameObject _finishMenu;
 
     private bool _hasStarted = false;
-    private bool _hasFinished = false;
 
     private void Start()
     {
         _startMenu.SetActive(true);
         _game.SetActive(false);
         _pauseMenu.SetActive(false);
-        _finishMenu.SetActive(false);
     }
 
     private void Update()
@@ -63,14 +61,6 @@ public class MenuManager : MonoBehaviour
 
     public void Finish()
     {
-        PauseManager.instance.FinishGame();
-        _pauseMenu.SetActive(false);
-        _game.SetActive(false);
-        _finishMenu.SetActive(true);
-        if (!_hasFinished)
-        {
-            LeaderboardManager.instance.Leaderboard();
-            _hasFinished = true;
-        }
+        SceneManager.LoadScene(2);
     }
 }

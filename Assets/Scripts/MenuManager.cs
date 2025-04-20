@@ -61,6 +61,8 @@ public class MenuManager : MonoBehaviour
 
     public void Finish()
     {
+        GameManager.finalName = GameManager.gameManager.playerName;
+        GameManager.finalScore = GameManager.gameManager.playerScore;
         SceneManager.LoadScene(2);
     }
 }

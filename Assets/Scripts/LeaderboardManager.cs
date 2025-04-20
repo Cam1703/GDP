@@ -24,15 +24,15 @@ public class LeaderboardManager : MonoBehaviour
         }
     }
 
-    public void Leaderboard()
+    public void Start()
     {
         _entryTemplate.gameObject.SetActive(false);
 
         GetRanking();
 
         _newEntry = new HighScore();
-        _newEntry.id = GameManager.gameManager.playerName;
-        _newEntry.score = GameManager.gameManager.playerScore;
+        _newEntry.id = GameManager.finalName;
+        _newEntry.score = GameManager.finalScore;
 
         if (_jsonString == null)
         {   
@@ -86,6 +86,7 @@ public class LeaderboardManager : MonoBehaviour
             _entryTransform.Find("PositionTemplate").GetComponent<Text>().text = _rankString;
             _entryTransform.Find("ScoreTemplate").GetComponent<Text>().text = (_jsonList[i].score.ToString("F3"));
             _entryTransform.Find("NameTemplate").GetComponent<Text>().text = _jsonList[i].id;
+            Debug.Log(i);
         }
         _jsonScores = new HighScoresList{highScores=_jsonList };
         

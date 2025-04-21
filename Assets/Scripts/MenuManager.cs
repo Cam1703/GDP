@@ -8,7 +8,7 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private GameObject _pauseMenu;
 
     public static MenuManager instance;
-    public bool _hasStarted = false;
+    private bool _hasStarted = false;
 
     private void Awake()
     {
@@ -49,10 +49,13 @@ public class MenuManager : MonoBehaviour
 
     public void Begin()
     {
-        PauseManager.instance.UnpauseGame();
-        _hasStarted = true;
-        _startMenu.SetActive(false);
-        _game.SetActive(true);
+        if (GameManager.gameManager.playerName != "")
+        {
+            PauseManager.instance.UnpauseGame();
+            _hasStarted = true;
+            _startMenu.SetActive(false);
+            _game.SetActive(true);
+        }
     }
 
     public void Pause() 

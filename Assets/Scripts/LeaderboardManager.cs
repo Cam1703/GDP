@@ -86,7 +86,6 @@ public class LeaderboardManager : MonoBehaviour
             _entryTransform.Find("PositionTemplate").GetComponent<Text>().text = _rankString;
             _entryTransform.Find("ScoreTemplate").GetComponent<Text>().text = (_jsonList[i].score.ToString("F3"));
             _entryTransform.Find("NameTemplate").GetComponent<Text>().text = _jsonList[i].id;
-            Debug.Log(i);
         }
         _jsonScores = new HighScoresList{highScores=_jsonList };
         

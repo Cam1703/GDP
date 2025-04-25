@@ -588,8 +588,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1732980126}
-  - {fileID: 903825868}
   - {fileID: 1774084757}
+  - {fileID: 903825868}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &289417372
@@ -3709,8 +3709,8 @@ MonoBehaviour:
   m_OnDidEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1796552653}
-        m_TargetAssemblyTypeName: ReadInput, Assembly-CSharp
+      - m_Target: {fileID: 1732980125}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: ReadName
         m_Mode: 0
         m_Arguments:

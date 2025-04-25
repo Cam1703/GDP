@@ -1,11 +1,12 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    [SerializeField] private GameObject _startMenu;
-    [SerializeField] private GameObject _game;
-    [SerializeField] private GameObject _pauseMenu;
+    private GameObject _startMenu;
+    private GameObject _game;
+    private GameObject _pauseMenu;
 
     public static MenuManager instance;
     private bool _hasStarted = false;
@@ -16,13 +17,6 @@ public class MenuManager : MonoBehaviour
         {
             instance = this;
         }
-    }
-
-    private void Start()
-    {
-        _startMenu.SetActive(true);
-        _game.SetActive(false);
-        _pauseMenu.SetActive(false);
     }
 
     private void Update()
@@ -49,6 +43,7 @@ public class MenuManager : MonoBehaviour
 
     public void Begin()
     {
+        Debug.Log("22222");
         if (GameManager.gameManager.playerName != "")
         {
             PauseManager.instance.UnpauseGame();
@@ -62,6 +57,7 @@ public class MenuManager : MonoBehaviour
     {
         PauseManager.instance.PauseGame();
         _pauseMenu.SetActive(true);
+
     }
 
     public void Unpause()
@@ -76,4 +72,43 @@ public class MenuManager : MonoBehaviour
         GameManager.finalScore = GameManager.gameManager.playerScore;
         SceneManager.LoadScene(2);
     }
+
+    public void OnPlayButton()
+    {
+        DontDestroyOnLoad(this.gameObject);
+        SceneManager.LoadScene(1);
+        Debug.Log(0);
+        StartCoroutine(waiter());
+
+    }
+
+    IEnumerator waiter()
+    {
+        Debug.Log(1);
+        yield return new WaitForSecondsRealtime(0.1f);
+        Debug.Log(2);
+        _startMenu = GameObject.Find("StartContainer");
+        Debug.Log(_startMenu);
+        _pauseMenu = GameObject.Find("PauseContainer");
+        _game = GameObject.Find("GameProper");
+
+        _startMenu.SetActive(true);
+        _game.SetActive(false);
+        _pauseMenu.SetActive(false);
+        Destroy(this.gameObject);
+    }
+    public void OnMenuButton()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    public void OnQuitButton()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else 
+        Application.Quit();
+#endif
+    }
+
 }

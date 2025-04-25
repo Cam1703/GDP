@@ -202,8 +202,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8079116123908800521}
-        m_TargetAssemblyTypeName: SceneManage, Assembly-CSharp
+      - m_Target: {fileID: 4526562597700608948, guid: 5ce16783287e53840bc73e332c2dc21d, type: 3}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
         m_MethodName: OnQuitButton
         m_Mode: 1
         m_Arguments:
@@ -642,8 +642,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8079116123908800521}
-        m_TargetAssemblyTypeName: SceneManage, Assembly-CSharp
+      - m_Target: {fileID: 4526562597700608948, guid: 5ce16783287e53840bc73e332c2dc21d, type: 3}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
         m_MethodName: OnMenuButton
         m_Mode: 1
         m_Arguments:
@@ -1551,7 +1551,6 @@ GameObject:
   - component: {fileID: 3441445436456596634}
   - component: {fileID: 8079116123908800519}
   - component: {fileID: 8079116123908800520}
-  - component: {fileID: 8079116123908800521}
   m_Layer: 0
   m_Name: FinishCanvas
   m_TagString: Untagged
@@ -1717,18 +1716,6 @@ MonoBehaviour:
   _entryTemplate: {fileID: 2761363617640878477}
   _entryHeight: 18
   _jsonList: []
---- !u!114 &8079116123908800521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7062005432245761558}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b7e7acafe6a90b4894ae70ffe94f7a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &8158556234698463202
 MonoBehaviour:
   m_ObjectHideFlags: 0

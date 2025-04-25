@@ -17,11 +17,11 @@ public class PlayerInteractions : MonoBehaviour
 
     private void PlayerTakesDmg(int dmg)
     {
-        GameManager.gameManager._playerHealth.DmgUnit(dmg);
+        GameManager.instance._playerHealth.DmgUnit(dmg);
     }
 
     private void PlayerHeals(int healing)
     {
-        GameManager.gameManager._playerHealth.HealUnit(healing);
+        GameManager.instance._playerHealth.HealUnit(healing);
     }
 }

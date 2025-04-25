@@ -35,8 +35,8 @@ public class LeaderboardManager : MonoBehaviour
         _newEntry.score = GameManager.finalScore;
 
         if (_jsonString == null)
-        {   
-            _jsonScores = new HighScoresList();
+        {
+            _jsonScores = new HighScoresList { highScores = _jsonList };
         }
         else {
             _jsonScores = JsonUtility.FromJson<HighScoresList>(_jsonString);

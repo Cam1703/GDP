@@ -10,8 +10,8 @@ public class PlayerBoundaries : MonoBehaviour
     void Start()
     {
         _screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
-        _objectWidth = transform.GetComponent<SpriteRenderer>().bounds.size.x / 2f;
-        _objectHeight = transform.GetComponent<SpriteRenderer>().bounds.size.y / 2f;
+        _objectWidth = transform.GetComponentInChildren<SpriteRenderer>().bounds.size.x / 2f;
+        _objectHeight = transform.GetComponentInChildren<SpriteRenderer>().bounds.size.y / 2f;
     }
 
     void LateUpdate()

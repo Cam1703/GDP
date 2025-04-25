@@ -95,6 +95,7 @@ public class MenuManager : MonoBehaviour
     }
     public void OnMenuButton()
     {
+        Destroy(GameObject.Find("Managers"));
         SceneManager.LoadScene(0);
     }
 

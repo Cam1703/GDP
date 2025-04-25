@@ -8,6 +8,7 @@ TagManager:
   - Healer
   - Bullet
   - PLayerMovement
+  - PlayerSprite
   layers:
   - Default
   - TransparentFX

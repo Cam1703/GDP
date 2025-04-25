@@ -5,22 +5,16 @@ public class EnemyChase : MonoBehaviour
 {
     [SerializeField] GameObject player; // Reference to the player GameObject
     [SerializeField] float speed = 1f; // Speed of the enemy
-
-    private Vector2 movement;
-    private Rigidbody2D rb;
-
-    [SerializeField] private int lives = 2; // Number of lives the enemy has
-    private Transform playerTransform;
+    [SerializeField] int damage = 1; // Speed of the enemy
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         if (player == null)
         {
-            player = GameObject.FindWithTag("PLayerMovement"); 
+            player = GameObject.FindWithTag("Player"); 
         }
 
-        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -36,14 +30,13 @@ public class EnemyChase : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
-        if (collision.gameObject.CompareTag("Bullet"))
+        if (collision.gameObject.CompareTag("Player"))
         {
-            lives -= 1;
-
-            if (lives <= 0)
-            {
-                Destroy(gameObject);
-            }
+            // Trigger game over or player damage
+            player.GetComponent<PlayerHealthManager>().TakeDamage(damage); // Assuming the player has a method to take damage
+            Destroy(gameObject);
         }
     }
+
+
 }

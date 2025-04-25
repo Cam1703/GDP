@@ -1863,7 +1863,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 277110659}
+      - m_Target: {fileID: 8227058820295634374}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
         m_MethodName: Begin
         m_Mode: 1
@@ -3639,9 +3639,9 @@ MonoBehaviour:
   m_OnDidEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 102900000, guid: 39a1fa96ad2a449b908fca29d4297a74, type: 3}
+      - m_Target: {fileID: 271939436745362891, guid: 5ce16783287e53840bc73e332c2dc21d, type: 3}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: ReadName
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3671,7 +3671,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8227058820295634372}
-  - component: {fileID: 8227058820295634373}
+  - component: {fileID: 8227058820295634374}
   m_Layer: 0
   m_Name: Menu
   m_TagString: Untagged
@@ -3696,18 +3696,19 @@ Transform:
   - {fileID: 5034191152407914261}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8227058820295634373
+--- !u!114 &8227058820295634374
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7998579480089926726}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b7e7acafe6a90b4894ae70ffe94f7a0, type: 3}
+  m_Script: {fileID: 11500000, guid: 630562ecb0920584197398046ee1695c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _hasStarted: 0
 --- !u!224 &8435597192164556043
 RectTransform:
   m_ObjectHideFlags: 0

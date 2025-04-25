@@ -17,7 +17,6 @@ public class MenuManager : MonoBehaviour
         if (instance == null && instance != this)
         {
             instance = this;
-            Debug.Log(11111111);
         }
     }
 
@@ -47,7 +46,8 @@ public class MenuManager : MonoBehaviour
 
     public void Begin()
     {
-        if (GameManager.instance.playerName != "")
+        Debug.Log(2);
+        if (MainManager.gameManager.playerName != "")
         {
             PauseManager.instance.UnpauseGame();
             instance._hasStarted = true;

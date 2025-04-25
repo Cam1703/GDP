@@ -25,6 +25,7 @@ public class MainManager : MonoBehaviour
         Debug.Log(gameManager);
         //_uiManager = GetComponent<UIManager>();
         menuManager = GetComponent<MenuManager>();
+        Debug.Log(menuManager);
         //_boardManager = GetComponent<BoardManager>();
         //_soundManager = GetComponent<SoundManager>();
     }

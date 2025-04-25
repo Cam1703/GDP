@@ -16,6 +16,11 @@ public class PauseManager : MonoBehaviour
         }
     }
 
+    public void Start()
+    {
+        Time.timeScale = 0f;
+    }
+
     public void PauseGame()
     {
         isPaused = true;

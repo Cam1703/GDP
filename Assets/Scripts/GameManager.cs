@@ -3,7 +3,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 
-    public static GameManager gameManager {  get; private set; }
+    public static GameManager instance {  get; private set; }
 
     [SerializeField] public static int _maxInitialHealth = 3;
     
@@ -17,20 +17,21 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-        if (gameManager != null && gameManager != this)
+        if (instance != null && instance != this)
         {
             Destroy(this);
         }
         else
         {
-            gameManager = this;
+            instance = this;
         }
     }
 
     public void ReadName(string name)
     {
-        gameManager.playerName = name;
+        instance.playerName = name;
         MenuManager.instance.Begin();
+        Debug.Log(1);
     }
 
 }

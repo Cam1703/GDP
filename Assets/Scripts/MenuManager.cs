@@ -9,26 +9,30 @@ public class MenuManager : MonoBehaviour
     private GameObject _pauseMenu;
 
     public static MenuManager instance;
-    private bool _hasStarted = false;
+    public bool _hasStarted = false;
 
     private void Awake()
     {
-        if (instance == null)
+        
+        if (instance == null && instance != this)
         {
             instance = this;
+            Debug.Log(11111111);
         }
     }
 
     private void Update()
     {
-        if (_hasStarted)
+        if (instance._hasStarted)
         {
-            if (GameManager.gameManager._playerHealth.Health == 0)
+            Debug.Log(111);
+            if (GameManager.instance._playerHealth.Health == 0)
             {
                 Finish();
             }
             else if (InputManager.menuOpenInput)
             {
+                Debug.Log(111);
                 if (!PauseManager.instance.isPaused)
                 {
                     Pause();
@@ -43,13 +47,14 @@ public class MenuManager : MonoBehaviour
 
     public void Begin()
     {
-        Debug.Log("22222");
-        if (GameManager.gameManager.playerName != "")
+        if (GameManager.instance.playerName != "")
         {
             PauseManager.instance.UnpauseGame();
-            _hasStarted = true;
-            _startMenu.SetActive(false);
-            _game.SetActive(true);
+            instance._hasStarted = true;
+            Debug.Log(instance._hasStarted);
+            instance._startMenu.SetActive(false);
+            instance._game.SetActive(true);
+            Debug.Log(instance._hasStarted);
         }
     }
 
@@ -68,34 +73,27 @@ public class MenuManager : MonoBehaviour
 
     public void Finish()
     {
-        GameManager.finalName = GameManager.gameManager.playerName;
-        GameManager.finalScore = GameManager.gameManager.playerScore;
+        GameManager.finalName = GameManager.instance.playerName;
+        GameManager.finalScore = GameManager.instance.playerScore;
         SceneManager.LoadScene(2);
     }
 
     public void OnPlayButton()
     {
-        DontDestroyOnLoad(this.gameObject);
         SceneManager.LoadScene(1);
-        Debug.Log(0);
         StartCoroutine(waiter());
-
     }
 
     IEnumerator waiter()
     {
-        Debug.Log(1);
         yield return new WaitForSecondsRealtime(0.1f);
-        Debug.Log(2);
-        _startMenu = GameObject.Find("StartContainer");
-        Debug.Log(_startMenu);
-        _pauseMenu = GameObject.Find("PauseContainer");
-        _game = GameObject.Find("GameProper");
+        instance._startMenu = GameObject.Find("StartContainer");
+        instance._pauseMenu = GameObject.Find("PauseContainer");
+        instance._game = GameObject.Find("GameProper");
 
-        _startMenu.SetActive(true);
-        _game.SetActive(false);
-        _pauseMenu.SetActive(false);
-        Destroy(this.gameObject);
+        instance._startMenu.SetActive(true);
+        instance._game.SetActive(false);
+        instance._pauseMenu.SetActive(false);
     }
     public void OnMenuButton()
     {

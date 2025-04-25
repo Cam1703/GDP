@@ -24,15 +24,14 @@ public class MenuManager : MonoBehaviour
     {
         if (instance._hasStarted)
         {
-            Debug.Log(111);
-            if (GameManager.instance._playerHealth.Health == 0)
+            if (MainManager.gameManager._playerHealth.Health == 0)
             {
                 Finish();
             }
             else if (InputManager.menuOpenInput)
             {
                 Debug.Log(111);
-                if (!PauseManager.instance.isPaused)
+               if (!MainManager.pauseManager.isPaused)
                 {
                     Pause();
                 }
@@ -49,26 +48,25 @@ public class MenuManager : MonoBehaviour
         Debug.Log(2);
         if (MainManager.gameManager.playerName != "")
         {
-            PauseManager.instance.UnpauseGame();
+            MainManager.pauseManager.UnpauseGame();
             instance._hasStarted = true;
-            Debug.Log(instance._hasStarted);
             instance._startMenu.SetActive(false);
             instance._game.SetActive(true);
-            Debug.Log(instance._hasStarted);
+
         }
     }
 
     public void Pause() 
     {
-        PauseManager.instance.PauseGame();
-        _pauseMenu.SetActive(true);
+        MainManager.pauseManager.PauseGame();
+        instance._pauseMenu.SetActive(true);
 
     }
 
     public void Unpause()
     {
-        PauseManager.instance.UnpauseGame();
-        _pauseMenu.SetActive(false);
+        MainManager.pauseManager.UnpauseGame();
+        instance._pauseMenu.SetActive(false);
     }
 
     public void Finish()

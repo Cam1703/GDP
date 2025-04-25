@@ -7,6 +7,7 @@ public class MainManager : MonoBehaviour
 
     public static GameManager gameManager;
     public static MenuManager menuManager;
+    public static PauseManager pauseManager;
 
     void Awake()
     {
@@ -22,10 +23,9 @@ public class MainManager : MonoBehaviour
         DontDestroyOnLoad(this);
 
         gameManager = GetComponent<GameManager>();
-        Debug.Log(gameManager);
         //_uiManager = GetComponent<UIManager>();
         menuManager = GetComponent<MenuManager>();
-        Debug.Log(menuManager);
+        pauseManager = GetComponent<PauseManager>();
         //_boardManager = GetComponent<BoardManager>();
         //_soundManager = GetComponent<SoundManager>();
     }

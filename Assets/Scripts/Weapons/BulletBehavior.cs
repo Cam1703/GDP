@@ -22,9 +22,13 @@ public class BulletBehavior : MonoBehaviour
         if (!isPlayer)
         {
             Destroy(gameObject);
-            if(collision.gameObject.CompareTag("Enemy"))
+            if (collision.gameObject.CompareTag("Enemy"))
             {
-                collision.gameObject.GetComponent<EnemyHealth>().TakeDamage(1); 
+                EnemyHealth enemyHealth = collision.gameObject.GetComponent<EnemyHealth>();
+                if (enemyHealth != null)
+                {
+                    enemyHealth.TakeDamage(1);
+                }
             }
         }
     }

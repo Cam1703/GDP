@@ -25,6 +25,7 @@ public class PlayerHealthManager : MonoBehaviour
         }
 
         //UpdateHealth()
+        Debug.Log("Player healed " + amount);
     }
 
 

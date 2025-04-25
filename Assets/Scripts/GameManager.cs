@@ -29,10 +29,8 @@ public class GameManager : MonoBehaviour
 
     public void ReadName(string name)
     {
-        Debug.Log(1);
         instance.playerName = name;
         MainManager.menuManager.Begin();
-        Debug.Log(1);
     }
 
 }

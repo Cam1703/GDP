@@ -30,7 +30,6 @@ public class MenuManager : MonoBehaviour
             }
             else if (InputManager.menuOpenInput)
             {
-                Debug.Log(111);
                if (!MainManager.pauseManager.isPaused)
                 {
                     Pause();
@@ -45,7 +44,6 @@ public class MenuManager : MonoBehaviour
 
     public void Begin()
     {
-        Debug.Log(2);
         if (MainManager.gameManager.playerName != "")
         {
             MainManager.pauseManager.UnpauseGame();
@@ -60,7 +58,6 @@ public class MenuManager : MonoBehaviour
     {
         MainManager.pauseManager.PauseGame();
         instance._pauseMenu.SetActive(true);
-
     }
 
     public void Unpause()

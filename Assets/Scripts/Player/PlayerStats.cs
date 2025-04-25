@@ -8,11 +8,11 @@ public class PlayerStats : MonoBehaviour
 
     public void Update()
     {
-        _name.text = ("Player: " + GameManager.gameManager.playerName);
+        _name.text = ("Player: " + GameManager.instance.playerName);
         if (!PauseManager.instance.isPaused)
         {
-            GameManager.gameManager.playerScore += Time.deltaTime;
+            GameManager.instance.playerScore += Time.deltaTime;
         }
-        _score.text = ("Score: " + GameManager.gameManager.playerScore.ToString("F3")) + " s";
+        _score.text = ("Score: " + GameManager.instance.playerScore.ToString("F3")) + " s";
     }
 }

@@ -13,7 +13,7 @@ public class PlayerHealthBar : MonoBehaviour
     {
         for (int i = 0; i < hearts.Length; i++)
         {
-            if (i < GameManager.gameManager._playerHealth.MaxHealth)
+            if (i < GameManager.instance._playerHealth.MaxHealth)
             {
                 hearts[i].enabled = true;
             }
@@ -29,7 +29,7 @@ public class PlayerHealthBar : MonoBehaviour
     {
         for (int i = 0; i < hearts.Length; i++)
         {
-            if (i < GameManager.gameManager._playerHealth.Health)
+            if (i < GameManager.instance._playerHealth.Health)
             {
                 hearts[i].sprite = filledHeart;
             }

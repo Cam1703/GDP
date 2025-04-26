@@ -68,12 +68,12 @@ public class UIManager : MonoBehaviour
         _score = GameObject.Find("PlayerScore").GetComponent<TextMeshProUGUI>();
 
         _name.text = ("Player: " + MainManager.gameManager.playerName);
-        _score.text = ("Score: " + MainManager.gameManager.playerScore.ToString("F3") + " s");
+        UpdateScore();
     }
 
     public void UpdateScore()
-    { 
-        
+    {
+        _score.text = ("Score: " + MainManager.gameManager.playerScore.ToString("F3") + " s");
     }
 
 }

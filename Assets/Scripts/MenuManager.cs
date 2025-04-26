@@ -39,6 +39,7 @@ public class MenuManager : MonoBehaviour
             {
                 Unpause();
             }
+            MainManager.gameManager.UpdateTimer();
         }
     }
 

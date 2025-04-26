@@ -31,11 +31,11 @@ public class GameManager : MonoBehaviour
         MainManager.uiManager.StartNameAndScore();
     }
 
-    public void Timer()
+    public void UpdateTimer()
     {
         if (!MainManager.pauseManager.isPaused)
         {
-            instance.playerName += Time.deltaTime;
+            instance.playerScore += Time.deltaTime;
             MainManager.uiManager.UpdateScore();
         }
     }

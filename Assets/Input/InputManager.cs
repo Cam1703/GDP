@@ -35,4 +35,10 @@ public class InputManager : MonoBehaviour
         menuOpenInput = _menuOpenAction.WasPerformedThisFrame();
         menuCloseInput = _menuCloseAction.WasPerformedThisFrame();
     }
+
+    public void ReadName(string name)
+    {
+        MainManager.gameManager.playerName = name;
+        MainManager.menuManager.Begin();
+    }
 }

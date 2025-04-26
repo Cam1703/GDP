@@ -13,8 +13,12 @@ public class MenuManager : MonoBehaviour
 
     private void Awake()
     {
-        
-        if (instance == null && instance != this)
+
+        if (instance != null && instance != this)
+        {
+            Destroy(this);
+        }
+        else
         {
             instance = this;
         }
@@ -24,11 +28,7 @@ public class MenuManager : MonoBehaviour
     {
         if (instance._hasStarted)
         {
-            if (MainManager.gameManager._playerHealth.Health == 0)
-            {
-                Finish();
-            }
-            else if (InputManager.menuOpenInput)
+            if (InputManager.menuOpenInput)
             {
                if (!MainManager.pauseManager.isPaused)
                 {
@@ -39,6 +39,7 @@ public class MenuManager : MonoBehaviour
             {
                 Unpause();
             }
+            MainManager.gameManager.UpdateTimer();
         }
     }
 
@@ -50,6 +51,9 @@ public class MenuManager : MonoBehaviour
             instance._hasStarted = true;
             instance._startMenu.SetActive(false);
             instance._game.SetActive(true);
+
+            MainManager.uiManager.InitialHealthBar();
+            MainManager.gameManager.StartTimer();
 
         }
     }

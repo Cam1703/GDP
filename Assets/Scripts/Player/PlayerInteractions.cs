@@ -10,8 +10,8 @@ public class PlayerInteractions : MonoBehaviour
             PlayerHealthManager playerHealth = GetComponent<PlayerHealthManager>();
             if (playerHealth != null)
             {
-                playerHealth.Heal(1);
-                Destroy(collision.gameObject);
+                playerHealth.TakeDamage(1);
+                //Destroy(collision.gameObject);
             }
         }
     }

@@ -8,6 +8,7 @@ public class MainManager : MonoBehaviour
     public static GameManager gameManager;
     public static MenuManager menuManager;
     public static PauseManager pauseManager;
+    public static UIManager uiManager;
 
     void Awake()
     {
@@ -23,7 +24,7 @@ public class MainManager : MonoBehaviour
         DontDestroyOnLoad(this);
 
         gameManager = GetComponent<GameManager>();
-        //_uiManager = GetComponent<UIManager>();
+        uiManager = GetComponent<UIManager>();
         menuManager = GetComponent<MenuManager>();
         pauseManager = GetComponent<PauseManager>();
         //_boardManager = GetComponent<BoardManager>();

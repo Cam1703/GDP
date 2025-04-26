@@ -52,6 +52,7 @@ public class MenuManager : MonoBehaviour
             instance._game.SetActive(true);
 
             MainManager.uiManager.InitialHealthBar();
+            MainManager.gameManager.StartTimer();
 
         }
     }

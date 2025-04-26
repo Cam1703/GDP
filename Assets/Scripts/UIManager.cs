@@ -1,5 +1,6 @@
 using System.Linq;
 using System.Runtime.CompilerServices;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,6 +13,9 @@ public class UIManager : MonoBehaviour
 
     public Sprite _filledHeart;
     public Sprite _emptyHeart;
+
+    private TextMeshProUGUI _name;
+    private TextMeshProUGUI _score;
 
     private void Awake()
     {
@@ -58,6 +62,18 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    public void StartNameAndScore()
+    {
+        _name = GameObject.Find("PlayerName").GetComponent<TextMeshProUGUI>();
+        _score = GameObject.Find("PlayerScore").GetComponent<TextMeshProUGUI>();
 
+        _name.text = ("Player: " + MainManager.gameManager.playerName);
+        _score.text = ("Score: " + MainManager.gameManager.playerScore.ToString("F3") + " s");
+    }
+
+    public void UpdateScore()
+    { 
+        
+    }
 
 }

@@ -25,6 +25,19 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    
+    public void StartTimer()
+    {
+        instance.playerScore = 0f;
+        MainManager.uiManager.StartNameAndScore();
+    }
+
+    public void Timer()
+    {
+        if (!MainManager.pauseManager.isPaused)
+        {
+            instance.playerName += Time.deltaTime;
+            MainManager.uiManager.UpdateScore();
+        }
+    }
 
 }

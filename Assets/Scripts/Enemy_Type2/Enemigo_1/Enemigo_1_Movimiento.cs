@@ -22,15 +22,16 @@ public class EnemigoMovimientoPeriodico2D : MonoBehaviour
     private float contadorMovimiento = 0.0f;
     private Rigidbody2D rb2d;
     private SpriteRenderer spriteRenderer;
-    void Start()
+    private void Start()
     {
-        direccion = direccion.normalized;
 
+        // Mantén el resto del código original
         rb2d = GetComponent<Rigidbody2D>();
-
         spriteRenderer = GetComponent<SpriteRenderer>();
-
         contadorTiempo = 0;
+
+        // Normaliza la dirección aquí si es necesario
+        direccion = direccion.normalized;
     }
 
     void Update()
@@ -90,5 +91,16 @@ public class EnemigoMovimientoPeriodico2D : MonoBehaviour
         Gizmos.color = Color.red;
         Vector3 dir3D = new Vector3(direccion.x, direccion.y, 0);
         Gizmos.DrawRay(transform.position, dir3D.normalized * 2);
+    }
+
+    public void SetDireccion(Vector2 nuevaDireccion)
+    {
+        direccion = nuevaDireccion.normalized;
+
+        // Actualiza flip del sprite
+        if (spriteRenderer != null)
+        {
+            spriteRenderer.flipX = (direccion.x < 0);
+        }
     }
 }

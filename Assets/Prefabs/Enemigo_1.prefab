@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6617339158622117496}
   - component: {fileID: 270807030250057071}
   - component: {fileID: 6849640942425211490}
+  - component: {fileID: -3866875138713521699}
   m_Layer: 8
   m_Name: Enemigo_1
   m_TagString: Enemy
@@ -106,7 +107,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_AngularDamping: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -118,7 +119,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &6617339158622117496
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -196,6 +197,19 @@ MonoBehaviour:
   prefabProyectil: {fileID: 8747876099890101869, guid: 827eebf6eb489c640a157eddea760845, type: 3}
   puntoDisparo: {fileID: 2532162946301244380}
   cadenciaDisparo: 2
+--- !u!114 &-3866875138713521699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3291869931354271891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80aa2f37ffc6602438502713810b461d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 2
 --- !u!1 &9198426364464757317
 GameObject:
   m_ObjectHideFlags: 0

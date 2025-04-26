@@ -25,10 +25,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void ReadName(string name)
-    {
-        instance.playerName = name;
-        MainManager.menuManager.Begin();
-    }
+    
 
 }

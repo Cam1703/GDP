@@ -876,7 +876,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7573344785903988244, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
@@ -2183,8 +2184,8 @@ MonoBehaviour:
   m_OnDidEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 271939436745362891, guid: 5ce16783287e53840bc73e332c2dc21d, type: 3}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 1774084756}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
         m_MethodName: ReadName
         m_Mode: 0
         m_Arguments:

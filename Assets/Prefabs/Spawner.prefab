@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2168992320151370871}
   m_Layer: 0
   m_Name: Spawner
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47,4 +47,3 @@ MonoBehaviour:
   enemyPrefab1: {fileID: 3291869931354271891, guid: 5b6614aac2eada445bb77d4eab7b06c4, type: 3}
   enemyPrefab2: {fileID: 6263248658013582101, guid: fc6a8e7a70a1bea4b835830fade0164f, type: 3}
   spawnRate: 2
-  enemySpeed: 0

@@ -875,6 +875,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2667064397946075169, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2667064397946075169, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 2667064397946075169, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 3484869342376461133, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.74
@@ -901,7 +913,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4670872173882690615, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -200
+      value: -150
+      objectReference: {fileID: 0}
+    - target: {fileID: 6818100227563726947, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
+      propertyPath: m_fontSize
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 6818100227563726947, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 7673621721311264320, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
+      propertyPath: m_fontSize
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 7673621721311264320, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 8151298723985764737, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
       propertyPath: m_AnchorMax.x
@@ -2000,10 +2028,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -2431,10 +2459,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3

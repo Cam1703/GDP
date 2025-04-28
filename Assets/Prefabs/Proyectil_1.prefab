@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2159264251657273777}
   m_Layer: 0
   m_Name: Proyectil_1
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 176adb425b8fa734ca70b2bac9019761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 20
+  velocidad: 30
   tiempoVida: 2
 --- !u!50 &-806322864956910608
 Rigidbody2D:
@@ -118,7 +118,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_AngularDamping: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -130,7 +130,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &2159264251657273777
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -161,7 +161,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0

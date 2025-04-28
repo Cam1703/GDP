@@ -20,6 +20,7 @@ public class EnemyChase : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (player == null) { return; }
         Vector2 direction = (player.transform.position - transform.position).normalized; // Calculate direction to the player
 
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime); // Move towards the player
@@ -29,12 +30,21 @@ public class EnemyChase : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-
+        Debug.Log("Collision detected with: " + collision.gameObject.name);
         if (collision.gameObject.CompareTag("Player"))
         {
             // Trigger game over or player damage
-            player.GetComponent<PlayerHealthManager>().TakeDamage(damage); // Assuming the player has a method to take damage
-            Destroy(gameObject);
+
+            PlayerHealthManager playerHealth = collision.gameObject.GetComponent<PlayerHealthManager>();
+            if (playerHealth != null)
+            {
+                playerHealth.TakeDamage(damage); // Call the TakeDamage method on the player
+            }
+            else
+            {
+                Debug.LogError("PlayerHealthManager component not found on player object.");
+            }
+                Destroy(gameObject);
         }
     }
 

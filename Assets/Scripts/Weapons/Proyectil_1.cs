@@ -42,17 +42,24 @@ public class Proyectil : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!collision.CompareTag("Enemy")) // Evitar colisión con otros enemigos
+        Debug.Log("Collision detected with: " + collision.gameObject.name);
+
+
+        if (collision.gameObject.tag == "Player")
         {
-            if (collision.CompareTag("Player"))
+            PlayerHealthManager playerHealth = collision.gameObject.GetComponent<PlayerHealthManager>();
+            if (playerHealth != null)
             {
-                PlayerHealthManager playerHealth = GetComponent<PlayerHealthManager>();
-                if (playerHealth != null)
-                {
-                    playerHealth.TakeDamage(1);
-                }
+                playerHealth.TakeDamage(1);
+                Destroy(gameObject);
             }
-            Destroy(gameObject);
+            else
+            {
+                Debug.LogError("PlayerHealthManager component not found on player object.");
+            }
         }
+        
+            
+        
     }
 }

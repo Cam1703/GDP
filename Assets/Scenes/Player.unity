@@ -986,30 +986,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 7573344785903988244, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
+    - {fileID: 7465066852406902395, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7465066852406902395, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 673061422}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
---- !u!1 &673061421 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7465066852406902395, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
-  m_PrefabInstance: {fileID: 673061420}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &673061422
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 673061421}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4cbe8606d982fdd449a465054ef13e71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healAmount: 1
 --- !u!1 &851794215
 GameObject:
   m_ObjectHideFlags: 0
@@ -1882,8 +1862,31 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9096633349628278785, guid: 50131ed6e751d7840a5068f584b3021d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2099856794}
   m_SourcePrefab: {fileID: 100100000, guid: 50131ed6e751d7840a5068f584b3021d, type: 3}
+--- !u!1 &2099856791 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9096633349628278785, guid: 50131ed6e751d7840a5068f584b3021d, type: 3}
+  m_PrefabInstance: {fileID: 2035198047}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2099856794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099856791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe2767fff0ec3744590aa16f3005184d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healerPrefab: {fileID: 8809576790881762004, guid: 37bcd091a9fa57b4d9a87f2e64d723fe, type: 3}
+  spawnInterval: 5
+  minDistanceFromPlayer: 3
 --- !u!1 &2110682338
 GameObject:
   m_ObjectHideFlags: 0
@@ -2055,10 +2058,10 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 24
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 0
     m_HorizontalOverflow: 1
@@ -2465,7 +2468,7 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 24
     m_FontStyle: 2
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4

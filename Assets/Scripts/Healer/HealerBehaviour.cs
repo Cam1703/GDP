@@ -1,8 +1,10 @@
 using UnityEngine;
+using System.Collections;
 
 public class HealerBehaviour : MonoBehaviour
 {
     [SerializeField] private int healAmount = 1;
+    [SerializeField] private int timeToDestroy = 5; // Time in seconds before the healer is destroyed
     private GameObject player;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -13,6 +15,8 @@ public class HealerBehaviour : MonoBehaviour
             player = GameObject.FindWithTag("Player");
         }
 
+        // Start the destroy coroutine
+        StartCoroutine(DestroyAfterTime());
     }
 
 
@@ -32,5 +36,12 @@ public class HealerBehaviour : MonoBehaviour
             }
             Destroy(gameObject);
         }
+    }
+
+    //Destroy Coroutine
+    private IEnumerator DestroyAfterTime()
+    {
+        yield return new WaitForSeconds(timeToDestroy);
+        Destroy(gameObject);
     }
 }

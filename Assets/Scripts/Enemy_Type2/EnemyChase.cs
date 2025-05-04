@@ -5,7 +5,7 @@ public class EnemyChase : MonoBehaviour
 {
     [SerializeField] GameObject player; // Reference to the player GameObject
     [SerializeField] float speed = 1f; // Speed of the enemy
-    [SerializeField] int damage = 1; // Speed of the enemy
+    [SerializeField] int damage = 0; // Speed of the enemy
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -30,7 +30,7 @@ public class EnemyChase : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Collision detected with: " + collision.gameObject.name);
+        //Debug.Log("Collision detected with: " + collision.gameObject.name);
         if (collision.gameObject.CompareTag("Player"))
         {
             // Trigger game over or player damage

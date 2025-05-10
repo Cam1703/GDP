@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3866875138713521699, guid: 5b6614aac2eada445bb77d4eab7b06c4, type: 3}
+      propertyPath: _damageSound
+      value: 
+      objectReference: {fileID: 3001234568186554962}
     - target: {fileID: 270807030250057071, guid: 5b6614aac2eada445bb77d4eab7b06c4, type: 3}
       propertyPath: velocidad
       value: 1
@@ -15,6 +19,14 @@ PrefabInstance:
     - target: {fileID: 3291869931354271891, guid: 5b6614aac2eada445bb77d4eab7b06c4, type: 3}
       propertyPath: m_Name
       value: Enemigo_1 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 5348906138169740389, guid: 5b6614aac2eada445bb77d4eab7b06c4, type: 3}
+      propertyPath: Priority
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5348906138169740389, guid: 5b6614aac2eada445bb77d4eab7b06c4, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8350743212542161572, guid: 5b6614aac2eada445bb77d4eab7b06c4, type: 3}
       propertyPath: m_Controller
@@ -65,3 +77,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b6614aac2eada445bb77d4eab7b06c4, type: 3}
+--- !u!82 &3001234568186554962 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5348906138169740389, guid: 5b6614aac2eada445bb77d4eab7b06c4, type: 3}
+  m_PrefabInstance: {fileID: 7178077251783779895}
+  m_PrefabAsset: {fileID: 0}

@@ -57,7 +57,7 @@ public class MenuManager : MonoBehaviour
             instance._startMenu.SetActive(false);
             instance._game.SetActive(true);
             instance._startSound.Play();
-            instance._gameLoop.PlayDelayed(_startSound.clip.length);
+            instance._gameLoop.PlayDelayed(0);
             
             MainManager.uiManager.InitialHealthBar();
             MainManager.gameManager.StartTimer();

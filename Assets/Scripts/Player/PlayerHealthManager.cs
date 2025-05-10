@@ -6,7 +6,8 @@ public class PlayerHealthManager : MonoBehaviour
 
     private int maxHealth = GameManager.maxInitialHealth;
     public int health;
-    
+    public AudioSource _damageSound;
+
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -27,6 +28,7 @@ public class PlayerHealthManager : MonoBehaviour
     public void TakeDamage(int damage)
     {
         instance.health -= damage;
+        AudioSource.PlayClipAtPoint(_damageSound.clip, transform.position);
         if (instance.health <= 0)
         {
             MainManager.menuManager.Finish();

@@ -934,7 +934,40 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      UI_Tileset_Nuevo (1)_0: -8686051956065859280
+      UI_Tileset_Nuevo (1)_1: -4627016500857426977
+      UI_Tileset_Nuevo (1)_10: -3327821890133936754
+      UI_Tileset_Nuevo (1)_11: -491980600249343400
+      UI_Tileset_Nuevo (1)_12: 8103679128344099674
+      UI_Tileset_Nuevo (1)_13: -421415812968814904
+      UI_Tileset_Nuevo (1)_14: -7668722128742895149
+      UI_Tileset_Nuevo (1)_15: 9121127043947416844
+      UI_Tileset_Nuevo (1)_16: -9121831252412517716
+      UI_Tileset_Nuevo (1)_17: 3655553037636847903
+      UI_Tileset_Nuevo (1)_18: -2521966621573682947
+      UI_Tileset_Nuevo (1)_19: -1841685007388607849
+      UI_Tileset_Nuevo (1)_2: -8673584181157543388
+      UI_Tileset_Nuevo (1)_20: -6709089492979513777
+      UI_Tileset_Nuevo (1)_21: -2970742865835607629
+      UI_Tileset_Nuevo (1)_22: -6768659288898816267
+      UI_Tileset_Nuevo (1)_23: -5688746574935422520
+      UI_Tileset_Nuevo (1)_24: -7302143152131537874
+      UI_Tileset_Nuevo (1)_25: -2150831907834017203
+      UI_Tileset_Nuevo (1)_26: -8956041706234221320
+      UI_Tileset_Nuevo (1)_27: 8955177437283251813
+      UI_Tileset_Nuevo (1)_28: 5484448652017286946
+      UI_Tileset_Nuevo (1)_29: -5651784620892659492
+      UI_Tileset_Nuevo (1)_3: -3278731815361437472
+      UI_Tileset_Nuevo (1)_30: -8092696388415565046
+      UI_Tileset_Nuevo (1)_31: 6996332360402381203
+      UI_Tileset_Nuevo (1)_32: 2037142385422322686
+      UI_Tileset_Nuevo (1)_4: 3084214175526962633
+      UI_Tileset_Nuevo (1)_5: -2023956748391531983
+      UI_Tileset_Nuevo (1)_6: 2879849341204819987
+      UI_Tileset_Nuevo (1)_7: 301128051696495619
+      UI_Tileset_Nuevo (1)_8: 5184747936812519883
+      UI_Tileset_Nuevo (1)_9: -6631708863321377882
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

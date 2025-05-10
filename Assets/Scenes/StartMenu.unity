@@ -1146,8 +1146,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ebaa675949211147a78b64debe17369, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _filledHeart: {fileID: 0}
-  _emptyHeart: {fileID: 0}
+  _filledHeart: {fileID: 2069008808, guid: dc5165da4357de9409a50ed00422a4c8, type: 3}
+  _emptyHeart: {fileID: -1608911076, guid: dc5165da4357de9409a50ed00422a4c8, type: 3}
 --- !u!1 &2058519234
 GameObject:
   m_ObjectHideFlags: 0
@@ -1303,7 +1303,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Managers
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7055135044702876941, guid: 5ce16783287e53840bc73e332c2dc21d, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:

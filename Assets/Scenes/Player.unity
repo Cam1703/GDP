@@ -974,6 +974,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1769025910826536499, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 2069008808, guid: dc5165da4357de9409a50ed00422a4c8, type: 3}
+    - target: {fileID: 2285323609411820927, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 2069008808, guid: dc5165da4357de9409a50ed00422a4c8, type: 3}
     - target: {fileID: 2504738167364489553, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
       propertyPath: m_Name
       value: GameProper
@@ -1050,6 +1058,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 1.3155
       objectReference: {fileID: 0}
+    - target: {fileID: 4533322570580701041, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 2069008808, guid: dc5165da4357de9409a50ed00422a4c8, type: 3}
     - target: {fileID: 4670872173882690615, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
       propertyPath: m_AnchorMax.x
       value: 1
@@ -1090,6 +1102,10 @@ PrefabInstance:
       propertyPath: m_VerticalAlignment
       value: 512
       objectReference: {fileID: 0}
+    - target: {fileID: 7312029856977254747, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 2069008808, guid: dc5165da4357de9409a50ed00422a4c8, type: 3}
     - target: {fileID: 7673621721311264320, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
       propertyPath: m_fontSize
       value: 32
@@ -1142,6 +1158,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -100
       objectReference: {fileID: 0}
+    - target: {fileID: 8967855735116094863, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 2069008808, guid: dc5165da4357de9409a50ed00422a4c8, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 7573344785903988244, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}

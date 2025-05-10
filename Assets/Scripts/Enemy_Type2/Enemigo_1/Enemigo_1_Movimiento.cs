@@ -116,4 +116,24 @@ public class EnemigoMovimientoPeriodico2D : MonoBehaviour
             spriteRenderer.flipX = (direccion.x < 0);
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        //Debug.Log("Collision detected with: " + collision.gameObject.name);
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            // Trigger game over or player damage
+
+            PlayerHealthManager playerHealth = collision.gameObject.GetComponent<PlayerHealthManager>();
+            if (playerHealth != null)
+            {
+                playerHealth.TakeDamage(1); // Call the TakeDamage method on the player
+            }
+            else
+            {
+                Debug.LogError("PlayerHealthManager component not found on player object.");
+            }
+            Destroy(gameObject);
+        }
+    }
 }

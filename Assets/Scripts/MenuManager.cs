@@ -86,13 +86,13 @@ public class MenuManager : MonoBehaviour
     {
         GameManager.finalName = GameManager.instance.playerName;
         GameManager.finalScore = GameManager.instance.playerScore;
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
     }
 
     public void OnPlayButton()
     {
         instance._forwardSound.Play();
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
         StartCoroutine(waiter());
     }
 
@@ -112,7 +112,7 @@ public class MenuManager : MonoBehaviour
         instance._gameLoop.Stop();
         instance._backwardSound.Play();
         Destroy(GameObject.Find("Managers"));
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
     IEnumerator backToMenu()

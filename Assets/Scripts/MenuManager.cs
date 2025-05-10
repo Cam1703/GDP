@@ -11,6 +11,11 @@ public class MenuManager : MonoBehaviour
     public static MenuManager instance;
     public bool _hasStarted = false;
 
+    public AudioSource _startSound;
+    public AudioSource _forwardSound;
+    public AudioSource _backwardSound;
+    public AudioSource _gameLoop;
+
     private void Awake()
     {
 
@@ -51,7 +56,9 @@ public class MenuManager : MonoBehaviour
             instance._hasStarted = true;
             instance._startMenu.SetActive(false);
             instance._game.SetActive(true);
-
+            instance._startSound.Play();
+            instance._gameLoop.PlayDelayed(0);
+            
             MainManager.uiManager.InitialHealthBar();
             MainManager.gameManager.StartTimer();
 
@@ -60,14 +67,19 @@ public class MenuManager : MonoBehaviour
 
     public void Pause() 
     {
+        instance._gameLoop.Pause();
+        instance._backwardSound.Play();
         MainManager.pauseManager.PauseGame();
         instance._pauseMenu.SetActive(true);
     }
 
     public void Unpause()
     {
+        instance._forwardSound.Play();
         MainManager.pauseManager.UnpauseGame();
         instance._pauseMenu.SetActive(false);
+        instance._gameLoop.PlayDelayed(_forwardSound.clip.length);
+
     }
 
     public void Finish()
@@ -79,6 +91,7 @@ public class MenuManager : MonoBehaviour
 
     public void OnPlayButton()
     {
+        instance._forwardSound.Play();
         SceneManager.LoadScene(1);
         StartCoroutine(waiter());
     }
@@ -96,9 +109,17 @@ public class MenuManager : MonoBehaviour
     }
     public void OnMenuButton()
     {
+        instance._gameLoop.Stop();
+        instance._backwardSound.Play();
         Destroy(GameObject.Find("Managers"));
         SceneManager.LoadScene(0);
     }
+
+    IEnumerator backToMenu()
+    {
+        yield return new WaitForSecondsRealtime(_forwardSound.clip.length);
+    }
+
 
     public void OnQuitButton()
     {

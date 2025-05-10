@@ -746,6 +746,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 296860127}
   m_CullTransparentMesh: 1
+--- !u!1 &405002553 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9096633349628278785, guid: 50131ed6e751d7840a5068f584b3021d, type: 3}
+  m_PrefabInstance: {fileID: 1571157249}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &405002556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405002553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe2767fff0ec3744590aa16f3005184d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healerPrefab: {fileID: 8809576790881762004, guid: 37bcd091a9fa57b4d9a87f2e64d723fe, type: 3}
+  spawnInterval: 5
+  minDistanceFromPlayer: 2
+  secondsUntilSpawn: 5
 --- !u!1 &517467422
 GameObject:
   m_ObjectHideFlags: 0
@@ -5432,7 +5453,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9096633349628278785, guid: 50131ed6e751d7840a5068f584b3021d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 405002556}
   m_SourcePrefab: {fileID: 100100000, guid: 50131ed6e751d7840a5068f584b3021d, type: 3}
 --- !u!1 &1609716029
 GameObject:
@@ -6022,15 +6046,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Start!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: de8def7500ccc8849a78fc9fff8080f9, type: 2}
+  m_sharedMaterial: {fileID: -4067952810622565386, guid: de8def7500ccc8849a78fc9fff8080f9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4281212645
+  m_fontColor: {r: 0.8980392, g: 0.11764706, b: 0.18039216, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -6053,7 +6077,7 @@ MonoBehaviour:
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 85
-  m_fontStyle: 0
+  m_fontStyle: 16
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535

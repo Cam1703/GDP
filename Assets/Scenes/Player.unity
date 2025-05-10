@@ -1272,6 +1272,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 1.3155
       objectReference: {fileID: 0}
+    - target: {fileID: 4195348430808872445, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 5f96df2409eea2b49b80043fde680829, type: 3}
+    - target: {fileID: 4195348430808872445, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5f96df2409eea2b49b80043fde680829, type: 3}
     - target: {fileID: 4533322570580701041, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
       propertyPath: m_Sprite
       value: 

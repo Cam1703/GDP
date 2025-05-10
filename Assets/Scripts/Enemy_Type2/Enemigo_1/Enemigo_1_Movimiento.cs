@@ -20,14 +20,23 @@ public class EnemigoMovimientoPeriodico2D : MonoBehaviour
     private float contadorTiempo = 0.0f;
     private bool estaMoviendose = false;
     private float contadorMovimiento = 0.0f;
+
     private Rigidbody2D rb2d;
     private SpriteRenderer spriteRenderer;
+    private Animator animator;
+
+    private const string _horizontal = "Horizontal";
+    private const string _vertical = "Vertical";
+
+
+
     private void Start()
     {
 
         // Mantén el resto del código original
         rb2d = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
         contadorTiempo = 0;
 
         // Normaliza la dirección aquí si es necesario
@@ -36,6 +45,10 @@ public class EnemigoMovimientoPeriodico2D : MonoBehaviour
 
     void Update()
     {
+
+        animator.SetFloat(_horizontal,direccion.x);
+        animator.SetFloat(_vertical, direccion.y);
+
         if (!estaMoviendose)
         {
             contadorTiempo += Time.deltaTime;

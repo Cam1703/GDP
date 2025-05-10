@@ -1,100 +1,106 @@
 fileFormatVersion: 2
-guid: dc5165da4357de9409a50ed00422a4c8
+guid: 1a7fa227954448b4dac88c171a324b0d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 862699629244338029
-    second: UI_Tileset_Escalado_0
+      213: -485792529009970106
+    second: UI_Tileset_Nuevo_0
   - first:
-      213: 8616725189008779837
-    second: UI_Tileset_Escalado_1
+      213: -3541600510069463775
+    second: UI_Tileset_Nuevo_1
   - first:
-      213: -2845096115286408468
-    second: UI_Tileset_Escalado_2
+      213: -8987483545729060748
+    second: UI_Tileset_Nuevo_2
   - first:
-      213: -2783580002719605181
-    second: UI_Tileset_Escalado_3
+      213: -5361782639846015602
+    second: UI_Tileset_Nuevo_3
   - first:
-      213: 1599341423108691785
-    second: UI_Tileset_Escalado_4
+      213: -2600002685601092930
+    second: UI_Tileset_Nuevo_4
   - first:
-      213: 5534013780740899100
-    second: UI_Tileset_Escalado_5
+      213: -7129181710750120363
+    second: UI_Tileset_Nuevo_5
   - first:
-      213: -5444530569768878640
-    second: UI_Tileset_Escalado_6
+      213: -5510078017001496299
+    second: UI_Tileset_Nuevo_6
   - first:
-      213: 2989427294610811821
-    second: UI_Tileset_Escalado_7
+      213: -5150329764682662115
+    second: UI_Tileset_Nuevo_7
   - first:
-      213: -8121381058054653423
-    second: UI_Tileset_Escalado_8
+      213: 4664054779016876591
+    second: UI_Tileset_Nuevo_8
   - first:
-      213: 6949412625538672081
-    second: UI_Tileset_Escalado_9
+      213: -3297835118428845052
+    second: UI_Tileset_Nuevo_9
   - first:
-      213: -2466492096425855611
-    second: UI_Tileset_Escalado_10
+      213: 1718193071531418999
+    second: UI_Tileset_Nuevo_10
   - first:
-      213: 2371688588372824922
-    second: UI_Tileset_Escalado_11
+      213: -5337330437494602463
+    second: UI_Tileset_Nuevo_11
   - first:
-      213: 8397565555267237218
-    second: UI_Tileset_Escalado_12
+      213: 6980447228540033723
+    second: UI_Tileset_Nuevo_12
   - first:
-      213: 4760095086094387981
-    second: UI_Tileset_Escalado_13
+      213: 2137168022343394212
+    second: UI_Tileset_Nuevo_13
   - first:
-      213: 6058653612809916881
-    second: UI_Tileset_Escalado_14
+      213: 3210714612005604267
+    second: UI_Tileset_Nuevo_14
   - first:
-      213: -3156661851741521066
-    second: UI_Tileset_Escalado_15
+      213: 8255973760614537218
+    second: UI_Tileset_Nuevo_15
   - first:
-      213: -5711385578002252769
-    second: UI_Tileset_Escalado_16
+      213: 2168531780095679770
+    second: UI_Tileset_Nuevo_16
   - first:
-      213: 2407469752977118583
-    second: UI_Tileset_Escalado_17
+      213: -6592015153003028627
+    second: UI_Tileset_Nuevo_17
   - first:
-      213: -1630076342388742521
-    second: UI_Tileset_Escalado_18
+      213: 489190957257367167
+    second: UI_Tileset_Nuevo_18
   - first:
-      213: 4222581638743427458
-    second: UI_Tileset_Escalado_19
+      213: 8645718132689133180
+    second: UI_Tileset_Nuevo_19
   - first:
-      213: -3993945625714033872
-    second: UI_Tileset_Escalado_20
+      213: -4161977818373090086
+    second: UI_Tileset_Nuevo_20
   - first:
-      213: -8155126270372692685
-    second: UI_Tileset_Escalado_21
+      213: -8528027536344918048
+    second: UI_Tileset_Nuevo_21
   - first:
-      213: 328063072203722022
-    second: UI_Tileset_Escalado_22
+      213: 5298395163441894523
+    second: UI_Tileset_Nuevo_22
   - first:
-      213: -5936266510739365826
-    second: UI_Tileset_Escalado_23
+      213: 1661524795092052334
+    second: UI_Tileset_Nuevo_23
   - first:
-      213: 7254513256420083362
-    second: UI_Tileset_Escalado_24
+      213: 7407886773297225652
+    second: UI_Tileset_Nuevo_24
   - first:
-      213: 6241758342436919835
-    second: UI_Tileset_Escalado_25
+      213: 366611256953718684
+    second: UI_Tileset_Nuevo_25
   - first:
-      213: -1093158364133230111
-    second: UI_Tileset_Escalado_26
+      213: 7491038525409200942
+    second: UI_Tileset_Nuevo_26
   - first:
-      213: 2086751068588543153
-    second: UI_Tileset_Escalado_27
+      213: -3369192494744991090
+    second: UI_Tileset_Nuevo_27
   - first:
-      213: 9187842384937558390
-    second: UI_Tileset_Escalado_28
+      213: -4471625508268224403
+    second: UI_Tileset_Nuevo_28
   - first:
-      213: -79161340991644550
-    second: UI_Tileset_Escalado_29
+      213: 8920129634702512636
+    second: UI_Tileset_Nuevo_29
   - first:
-      213: 1028424324732088313
-    second: UI_Tileset_Escalado_30
+      213: 3525669194877451570
+    second: UI_Tileset_Nuevo_30
+  - first:
+      213: 4367220544791064694
+    second: UI_Tileset_Nuevo_31
+  - first:
+      213: -69872004554439722
+    second: UI_Tileset_Nuevo_32
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -190,210 +196,628 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: UI_Tileset_Escalado_0
+      name: UI_Tileset_Nuevo_0
       rect:
         serializedVersion: 2
-        x: 80
-        y: 940
-        width: 560
-        height: 120
+        x: 15
+        y: 187
+        width: 114
+        height: 26
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 971dd9d82ab4f694ea7af428ce551942
-      internalID: 819885725
+      spriteID: 64472d9c44e1249f0800000000000000
+      internalID: -485792529009970106
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Tileset_Escalado_1
+      name: UI_Tileset_Nuevo_1
       rect:
         serializedVersion: 2
-        x: 740
-        y: 520
-        width: 915
-        height: 530
+        x: 143
+        y: 187
+        width: 114
+        height: 26
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: fba833747f2c865479c484b9172c88ba
-      internalID: 201349878
+      spriteID: 125a7fca915b9dec0800000000000000
+      internalID: -3541600510069463775
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Tileset_Escalado_2
+      name: UI_Tileset_Nuevo_2
       rect:
         serializedVersion: 2
-        x: 1720
-        y: 950
-        width: 75
-        height: 105
+        x: 343
+        y: 189
+        width: 17
+        height: 23
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 18ede95ce0036024fa8c61573c06544e
-      internalID: -839850325
+      spriteID: 470b628355b064380800000000000000
+      internalID: -8987483545729060748
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Tileset_Escalado_3
+      name: UI_Tileset_Nuevo_3
       rect:
         serializedVersion: 2
-        x: 1725
-        y: 920
-        width: 65
-        height: 25
+        x: 344
+        y: 183
+        width: 15
+        height: 7
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 5ba1c497254378448be583835a324590
-      internalID: -1961335914
+      spriteID: e8d3f15d81f1795b0800000000000000
+      internalID: -5361782639846015602
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Tileset_Escalado_4
+      name: UI_Tileset_Nuevo_4
       rect:
         serializedVersion: 2
-        x: 85
-        y: 805
-        width: 265
-        height: 90
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: be1dfc7124784ce4bac5374981e5f5ad
-      internalID: -788345630
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_Tileset_Escalado_5
-      rect:
-        serializedVersion: 2
-        x: 370
-        y: 805
-        width: 265
-        height: 90
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7b1276dd3c3f404409015985a993b905
-      internalID: 1136944642
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_Tileset_Escalado_6
-      rect:
-        serializedVersion: 2
-        x: 1720
-        y: 795
-        width: 75
-        height: 105
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 36a1e9dd3d5feea439454469deaf5227
-      internalID: -895810682
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_Tileset_Escalado_7
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 670
-        width: 275
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b0172aede91719e40b86430e72864f6e
-      internalID: -1785757650
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_Tileset_Escalado_8
-      rect:
-        serializedVersion: 2
-        x: 365
-        y: 670
-        width: 275
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5697b1173738f204f8978a0f236e4c49
-      internalID: -1617657517
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_Tileset_Escalado_9
-      rect:
-        serializedVersion: 2
-        x: 1730
-        y: 760
+        x: 16
+        y: 160
         width: 55
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eba6fa5355feaebd0800000000000000
+      internalID: -2600002685601092930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Tileset_Nuevo_5
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 160
+        width: 55
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 556078f810f001d90800000000000000
+      internalID: -7129181710750120363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Tileset_Nuevo_6
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 154
+        width: 116
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 511efe7bc354883b0800000000000000
+      internalID: -5510078017001496299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Tileset_Nuevo_7
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 158
+        width: 17
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1ff7fbdd5a5688b0800000000000000
+      internalID: -5150329764682662115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Tileset_Nuevo_8
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 133
+        width: 57
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f22934c3c1d0ab040800000000000000
+      internalID: 4664054779016876591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Tileset_Nuevo_9
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 133
+        width: 57
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40c8d36be6cbb32d0800000000000000
+      internalID: -3297835118428845052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Tileset_Nuevo_10
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 151
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 775ea24ce7f38d710800000000000000
+      internalID: 1718193071531418999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Tileset_Nuevo_11
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 107
+        width: 55
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1250148de3efde5b0800000000000000
+      internalID: -5337330437494602463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Tileset_Nuevo_12
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 107
+        width: 55
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bba1d7635c78fd060800000000000000
+      internalID: 6980447228540033723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Tileset_Nuevo_13
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 123
+        width: 114
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a32a1d3efeb8ad10800000000000000
+      internalID: 2137168022343394212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Tileset_Nuevo_14
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 127
+        width: 17
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bab00c3bdefbe8c20800000000000000
+      internalID: 3210714612005604267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Tileset_Nuevo_15
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 96
+        width: 17
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 208106ca46c139270800000000000000
+      internalID: 8255973760614537218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Tileset_Nuevo_16
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 119
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1d9fb42a2c281e10800000000000000
+      internalID: 2168531780095679770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Tileset_Nuevo_17
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 77
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6f1343f4257484a0800000000000000
+      internalID: -6592015153003028627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Tileset_Nuevo_18
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 76
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7e98a27594f9c600800000000000000
+      internalID: 489190957257367167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Tileset_Nuevo_19
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 77
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7ed61fa5d2cbf770800000000000000
+      internalID: 8645718132689133180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Tileset_Nuevo_20
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 77
+        width: 90
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad411dca93fad36c0800000000000000
+      internalID: -4161977818373090086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Tileset_Nuevo_ButtonBase2
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 77
+        width: 70
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e7596d932c56a980800000000000000
+      internalID: -8528027536344918048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Tileset_Nuevo_22
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 87
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b741a9c345ea78940800000000000000
+      internalID: 5298395163441894523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Tileset_Nuevo_23
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 45
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6927fc7ffbee0710800000000000000
+      internalID: 1661524795092052334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Tileset_Nuevo_24
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 44
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bf12ba85c91ec660800000000000000
+      internalID: 7407886773297225652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Tileset_Nuevo_25
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 45
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c97c26deef6761500800000000000000
+      internalID: 366611256953718684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Tileset_Nuevo_26
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 45
+        width: 92
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2b08c189d385f760800000000000000
+      internalID: 7491038525409200942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Tileset_Nuevo_ButtonHoover2
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 45
+        width: 72
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8a00dad6493e31d0800000000000000
+      internalID: -3369192494744991090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Tileset_Nuevo_28
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 11
+        width: 19
         height: 25
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -401,87 +825,65 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 11e28aaa850fdb64cbdcc9d5c02322a7
-      internalID: -1792167467
+      spriteID: d60d81bba4891f1c0800000000000000
+      internalID: -4471625508268224403
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Tileset_Escalado_10
+      name: UI_Tileset_Nuevo_29
       rect:
         serializedVersion: 2
-        x: 1720
-        y: 640
-        width: 75
-        height: 105
+        x: 55
+        y: 11
+        width: 19
+        height: 25
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: f913bb2a50d318e4cb92beb1893ba674
-      internalID: 300354594
+      spriteID: cf1d0e254aaaacb70800000000000000
+      internalID: 8920129634702512636
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Tileset_Escalado_11
+      name: UI_Tileset_Nuevo_30
       rect:
         serializedVersion: 2
-        x: 85
-        y: 540
-        width: 265
-        height: 90
+        x: 87
+        y: 11
+        width: 19
+        height: 25
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 367f7c6acf8233442a4d7ddaa91854a7
-      internalID: 1035952995
+      spriteID: 23d3534f371bde030800000000000000
+      internalID: 3525669194877451570
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Tileset_Escalado_12
+      name: UI_Tileset_Nuevo_31
       rect:
         serializedVersion: 2
-        x: 370
-        y: 540
-        width: 265
-        height: 90
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4d12dc533b7a7954a88a87079313998e
-      internalID: 674263732
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_Tileset_Escalado_13
-      rect:
-        serializedVersion: 2
-        x: 1740
-        y: 600
-        width: 35
+        x: 147
+        y: 14
+        width: 90
         height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -489,131 +891,21 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 318e9c13c89be0c4f8de368fc71a68f0
-      internalID: 1771937164
+      spriteID: 6703f0c62fb7b9c30800000000000000
+      internalID: 4367220544791064694
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Tileset_Escalado_14
+      name: UI_Tileset_Nuevo_ButtonPress2
       rect:
         serializedVersion: 2
-        x: 110
-        y: 390
-        width: 95
-        height: 95
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 23bf5b0f018727140ad74d64160cbbbc
-      internalID: -982297685
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_Tileset_Escalado_15
-      rect:
-        serializedVersion: 2
-        x: 270
-        y: 385
-        width: 105
-        height: 105
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 981933abc02d4bf4e9f1597eb5ed3524
-      internalID: -305903068
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_Tileset_Escalado_16
-      rect:
-        serializedVersion: 2
-        x: 430
-        y: 390
-        width: 95
-        height: 95
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 295c863bc955ad5428626a156fd1815b
-      internalID: 1836933690
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_Tileset_Escalado_17
-      rect:
-        serializedVersion: 2
-        x: 1720
-        y: 485
-        width: 75
-        height: 105
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e3a4f6afab2f4684ba5b86326a776fe7
-      internalID: 1787061693
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_Tileset_Escalado_ButtonBase2
-      rect:
-        serializedVersion: 2
-        x: 1230
-        y: 390
-        width: 340
-        height: 90
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 71291dbe62cb00d408b2fa8b6873a683
-      internalID: -146981869
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_Tileset_Escalado_20
-      rect:
-        serializedVersion: 2
-        x: 1745
-        y: 440
-        width: 25
+        x: 245
+        y: 14
+        width: 70
         height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -621,252 +913,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: ad6fa7de83b42684aaecfe7c0861fb73
-      internalID: -1683784088
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_Tileset_Escalado_21
-      rect:
-        serializedVersion: 2
-        x: 110
-        y: 230
-        width: 95
-        height: 95
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c7b4324c503bc85449fa34e52f9cd73b
-      internalID: 7203423
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_Tileset_Escalado_22
-      rect:
-        serializedVersion: 2
-        x: 270
-        y: 225
-        width: 105
-        height: 105
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 655a440323809544bbf45dd692b40a59
-      internalID: -1291930190
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_Tileset_Escalado_23
-      rect:
-        serializedVersion: 2
-        x: 430
-        y: 230
-        width: 95
-        height: 95
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 92dbaa425c2ca234eae8fc8e98ec89f2
-      internalID: -1536350161
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_Tileset_Escalado_ButtonHoover2
-      rect:
-        serializedVersion: 2
-        x: 1225
-        y: 230
-        width: 350
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e3ce5afb3874eeb41a5c9c85ccaa937f
-      internalID: -1517688692
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_Tileset_Escalado_26
-      rect:
-        serializedVersion: 2
-        x: 120
-        y: 60
-        width: 85
-        height: 115
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 64f7fe4d186b3004fb73a5a54643af03
-      internalID: 2069008808
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_Tileset_Escalado_27
-      rect:
-        serializedVersion: 2
-        x: 280
-        y: 60
-        width: 85
-        height: 115
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 78b4c392293e2354f9e9e986b47e364a
-      internalID: 1494984297
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_Tileset_Escalado_28
-      rect:
-        serializedVersion: 2
-        x: 440
-        y: 60
-        width: 85
-        height: 115
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 25de0910d539cbd4e831b452ddccd1b8
-      internalID: -1608911076
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_Tileset_Escalado_ButtonPress2
-      rect:
-        serializedVersion: 2
-        x: 1230
-        y: 75
-        width: 340
-        height: 90
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 07d2b2e1330076a42b69f5f1828bfcbf
-      internalID: 1177911865
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_Tileset_Escalado_ButtonBase
-      rect:
-        serializedVersion: 2
-        x: 740
-        y: 390
-        width: 440
-        height: 90
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ff659be6239cf3643b173dfb641cf5a8
-      internalID: -907148642
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_Tileset_Escalado_ButtonHoover
-      rect:
-        serializedVersion: 2
-        x: 735
-        y: 230
-        width: 450
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4a756ace76d494b4f84cc42f3492e631
-      internalID: -1866428421
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_Tileset_Escalado_ButtonPress
-      rect:
-        serializedVersion: 2
-        x: 740
-        y: 75
-        width: 440
-        height: 90
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 69ec4ea094e22c644a8275608c59bb82
-      internalID: 1035551199
+      spriteID: 6d3c9c438c3c70ff0800000000000000
+      internalID: -69872004554439722
       vertices: []
       indices: 
       edges: []
@@ -875,7 +925,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: d3eae2daf08f926459a6e52cfee43122
+    spriteID: 9ea12276c6fced44382040c355e18746
     internalID: 0
     vertices: []
     indices: 
@@ -885,37 +935,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      UI_Tileset_Escalado_0: 819885725
-      UI_Tileset_Escalado_1: 201349878
-      UI_Tileset_Escalado_10: 300354594
-      UI_Tileset_Escalado_11: 1035952995
-      UI_Tileset_Escalado_12: 674263732
-      UI_Tileset_Escalado_13: 1771937164
-      UI_Tileset_Escalado_14: -982297685
-      UI_Tileset_Escalado_15: -305903068
-      UI_Tileset_Escalado_16: 1836933690
-      UI_Tileset_Escalado_17: 1787061693
-      UI_Tileset_Escalado_2: -839850325
-      UI_Tileset_Escalado_20: -1683784088
-      UI_Tileset_Escalado_21: 7203423
-      UI_Tileset_Escalado_22: -1291930190
-      UI_Tileset_Escalado_23: -1536350161
-      UI_Tileset_Escalado_26: 2069008808
-      UI_Tileset_Escalado_27: 1494984297
-      UI_Tileset_Escalado_28: -1608911076
-      UI_Tileset_Escalado_3: -1961335914
-      UI_Tileset_Escalado_4: -788345630
-      UI_Tileset_Escalado_5: 1136944642
-      UI_Tileset_Escalado_6: -895810682
-      UI_Tileset_Escalado_7: -1785757650
-      UI_Tileset_Escalado_8: -1617657517
-      UI_Tileset_Escalado_9: -1792167467
-      UI_Tileset_Escalado_ButtonBase: -907148642
-      UI_Tileset_Escalado_ButtonBase2: -146981869
-      UI_Tileset_Escalado_ButtonHoover: -1866428421
-      UI_Tileset_Escalado_ButtonHoover2: -1517688692
-      UI_Tileset_Escalado_ButtonPress: 1035551199
-      UI_Tileset_Escalado_ButtonPress2: 1177911865
+      UI_Tileset_Nuevo_ButtonBase2: -8528027536344918048
+      UI_Tileset_Nuevo_ButtonHoover2: -3369192494744991090
+      UI_Tileset_Nuevo_ButtonPress2: -69872004554439722
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

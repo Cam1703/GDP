@@ -19,7 +19,8 @@ public class BulletBehavior : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         bool isPlayer = collision.gameObject.CompareTag("Player");
-        if (!isPlayer)
+        bool isHealth = collision.gameObject.CompareTag("Healer");
+        if (!isPlayer && !isHealth)
         {
             Destroy(gameObject);
             if (collision.gameObject.CompareTag("Enemy"))

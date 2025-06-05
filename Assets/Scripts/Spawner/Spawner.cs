@@ -6,12 +6,18 @@ public class EnemySpawner : MonoBehaviour
     public GameObject enemyPrefab2;
     public float spawnRate = 2f;
 
+    private float minSpawnRate = 0.5f;
+    private float maxSpawnRate = 3f;
+    private float spawnRateChangeInterval = 5f; // cada cuántos segundos cambia el spawnRate
+    private float spawnRateDelta = -0.2f; // al principio disminuirá
+
     private Camera mainCamera;
 
     void Start()
     {
         mainCamera = Camera.main;
         InvokeRepeating("SpawnEnemy", 0f, spawnRate);
+        InvokeRepeating("AdjustSpawnRate", spawnRateChangeInterval, spawnRateChangeInterval);
     }
 
     void SpawnEnemy()
@@ -29,6 +35,22 @@ public class EnemySpawner : MonoBehaviour
         {
             movimiento.direccion = ObtenerDireccionPorBorde(edge);
         }
+    }
+
+    void AdjustSpawnRate()
+    {
+        spawnRate += spawnRateDelta;
+
+        if (spawnRate <= minSpawnRate || spawnRate >= maxSpawnRate)
+        {
+            // Invertir la dirección del cambio
+            spawnRateDelta *= -1;
+            spawnRate = Mathf.Clamp(spawnRate, minSpawnRate, maxSpawnRate);
+        }
+
+        // Reiniciar el InvokeRepeating con el nuevo spawnRate
+        CancelInvoke("SpawnEnemy");
+        InvokeRepeating("SpawnEnemy", 0f, spawnRate);
     }
 
     Vector3 CalcularPosicionSpawn(int borde)

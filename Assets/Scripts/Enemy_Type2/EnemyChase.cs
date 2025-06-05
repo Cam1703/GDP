@@ -4,8 +4,11 @@ using UnityEngine;
 public class EnemyChase : MonoBehaviour
 {
     [SerializeField] GameObject player; // Reference to the player GameObject
-    [SerializeField] float speed = 1f; // Speed of the enemy
-    [SerializeField] int damage = 0; // Speed of the enemy
+    [SerializeField] float speed = 2f; // Speed of the enemy
+    [SerializeField] int damage = 0;
+
+    public float Speed { get => speed; set => speed = value; }
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

@@ -31,6 +31,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Dash",
+                    "type": "Button",
+                    "id": "05b47665-00d1-4489-bae4-88dbdb7b9fff",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -168,6 +177,17 @@
                 },
                 {
                     "name": "",
+                    "id": "bd2d92f7-9de7-4c35-a950-febb71384e7f",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "e67d6ef4-70d3-444f-bb6c-096b83105e81",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
@@ -185,6 +205,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "MenuOPEN",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "67ac710b-5829-47d9-bb39-7bd384dc4c51",
+                    "path": "<Keyboard>/leftShift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Dash",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

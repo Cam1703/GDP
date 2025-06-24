@@ -1317,8 +1317,16 @@ PrefabInstance:
       value: -180
       objectReference: {fileID: 0}
     - target: {fileID: 5973814489177410458, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
+      propertyPath: _dashSpeed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5973814489177410458, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
       propertyPath: _movespeed
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5973814489177410458, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
+      propertyPath: _dashDuration
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 6526633613894516961, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
       propertyPath: m_LocalScale.x

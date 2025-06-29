@@ -98,14 +98,16 @@ public class MenuManager : MonoBehaviour
 
     IEnumerator waiter()
     {
-        yield return new WaitForSecondsRealtime(0.1f);
+        yield return new WaitForEndOfFrame();
+        yield return new WaitForEndOfFrame();
         instance._startMenu = GameObject.Find("StartContainer");
         instance._pauseMenu = GameObject.Find("PauseContainer");
         instance._game = GameObject.Find("GameProper");
 
+        instance._pauseMenu.SetActive(false);
         instance._startMenu.SetActive(true);
         instance._game.SetActive(false);
-        instance._pauseMenu.SetActive(false);
+        
     }
     public void OnMenuButton()
     {

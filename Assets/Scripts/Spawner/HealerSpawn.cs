@@ -6,63 +6,79 @@ public class HealerSpawn : MonoBehaviour
     [SerializeField] private GameObject healerPrefab;
     [SerializeField] private float spawnInterval = 5f;
     [SerializeField] private float minDistanceFromPlayer = 2f;
-    [SerializeField] private int secondsUntilSpawn = 5;
+    [SerializeField] private float initialSpawnDelay = 5f;
 
-    private GameObject player;
     private Transform playerTransform;
     private Camera mainCamera;
 
-    void Start()
+    private const int MaxSpawnAttempts = 10;
+
+    private void Start()
     {
         mainCamera = Camera.main;
 
-        if (player == null)
+        GameObject player = GameObject.FindWithTag("Player");
+        if (player != null)
         {
-            player = GameObject.FindWithTag("Player");
-            if (player != null)
-                playerTransform = player.transform;
+            playerTransform = player.transform;
+            StartCoroutine(SpawnLoopAfterDelay(initialSpawnDelay));
         }
-
-        StartCoroutine(StartSpawningAfterDelay(secondsUntilSpawn));
+        else
+        {
+            Debug.LogWarning("Player not found. Healer spawning disabled.");
+        }
     }
 
-    private IEnumerator StartSpawningAfterDelay(float seconds)
+    private IEnumerator SpawnLoopAfterDelay(float delay)
     {
-        yield return new WaitForSeconds(seconds);
-        InvokeRepeating("SpawnHealer", 0f, spawnInterval);
+        yield return new WaitForSeconds(delay);
+        InvokeRepeating(nameof(SpawnHealer), 0f, spawnInterval);
     }
 
-    void SpawnHealer()
+    private void SpawnHealer()
     {
         if (playerTransform == null) return;
 
-        Vector3 spawnPosition;
-        int attempts = 0;
-        const int maxAttempts = 10;
-
-        do
+        for (int attempt = 0; attempt < MaxSpawnAttempts; attempt++)
         {
-            int edge = Random.Range(0, 4);
-            spawnPosition = CalcularPosicionSpawn(edge);
-            attempts++;
-        }
-        while (Vector3.Distance(spawnPosition, playerTransform.position) < minDistanceFromPlayer && attempts < maxAttempts);
+            Vector3 spawnPosition = GetRandomEdgePosition();
 
-        Instantiate(healerPrefab, spawnPosition, Quaternion.identity);
+            if (Vector3.Distance(spawnPosition, playerTransform.position) >= minDistanceFromPlayer)
+            {
+                Instantiate(healerPrefab, spawnPosition, Quaternion.identity);
+                Debug.Log($"Healer spawned at {spawnPosition} after {attempt + 1} attempts.");
+                return;
+            }
+        }
     }
 
-    Vector3 CalcularPosicionSpawn(int borde)
+    private Vector3 GetRandomEdgePosition()
     {
-        Vector3 viewportPos = Vector3.zero;
-
-        switch (borde)
+        float x, y;
+        switch (Random.Range(0, 4))
         {
-            case 0: viewportPos = new Vector3(Random.Range(0.1f, 0.9f), 0.95f, 0f); break; // Norte
-            case 1: viewportPos = new Vector3(Random.Range(0.1f, 0.9f), 0.05f, 0f); break; // Sur
-            case 2: viewportPos = new Vector3(0.95f, Random.Range(0.1f, 0.9f), 0f); break; // Este
-            case 3: viewportPos = new Vector3(0.05f, Random.Range(0.1f, 0.9f), 0f); break; // Oeste
+            case 0: // Top
+                x = Random.Range(0.1f, 0.9f);
+                y = 0.95f;
+                break;
+            case 1: // Bottom
+                x = Random.Range(0.1f, 0.9f);
+                y = 0.05f;
+                break;
+            case 2: // Right
+                x = 0.95f;
+                y = Random.Range(0.1f, 0.9f);
+                break;
+            case 3: // Left
+                x = 0.05f;
+                y = Random.Range(0.1f, 0.9f);
+                break;
+            default:
+                x = y = 0.5f;
+                break;
         }
 
+        Vector3 viewportPos = new Vector3(x, y, 0f);
         Vector3 worldPos = mainCamera.ViewportToWorldPoint(viewportPos);
         worldPos.z = 0f;
         return worldPos;

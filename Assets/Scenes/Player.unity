@@ -1100,16 +1100,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2991735933484066677, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 2.1333334
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: 2991735933484066677, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 2.1333334
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: 2991735933484066677, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
       propertyPath: m_SpriteTilingProperty.adaptiveTilingThreshold
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3218523314235363257, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
+      propertyPath: _shootSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6ce7b89f9d0092b45bc9ea6bb0a93412, type: 3}
+    - target: {fileID: 3218523314235363257, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
+      propertyPath: _audioSource
+      value: 
+      objectReference: {fileID: 673061421}
     - target: {fileID: 3218523314235363257, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
       propertyPath: _bulletPrefab
       value: 
@@ -1175,6 +1183,10 @@ PrefabInstance:
       value: -180
       objectReference: {fileID: 0}
     - target: {fileID: 5973814489177410458, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
+      propertyPath: _dashSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a878fd2f3a5625d48ace3d7e1600a2f4, type: 3}
+    - target: {fileID: 5973814489177410458, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
       propertyPath: _dashSpeed
       value: 12
       objectReference: {fileID: 0}
@@ -1182,6 +1194,10 @@ PrefabInstance:
       propertyPath: _movespeed
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 5973814489177410458, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
+      propertyPath: _audioSource
+      value: 
+      objectReference: {fileID: 673061421}
     - target: {fileID: 5973814489177410458, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
       propertyPath: _dashDuration
       value: 0.4
@@ -1422,6 +1438,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2093049324}
   m_SourcePrefab: {fileID: 100100000, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
+--- !u!82 &673061421 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4195348430808872445, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
+  m_PrefabInstance: {fileID: 673061420}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &851794215
 GameObject:
   m_ObjectHideFlags: 0

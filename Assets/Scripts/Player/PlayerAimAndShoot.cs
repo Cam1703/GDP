@@ -12,6 +12,10 @@ public class PlayerAimAndShoot : MonoBehaviour
     [Tooltip("Segundos entre disparos cuando se mantiene pulsado")]
     [SerializeField] private float fireRate = 0.2f;
 
+    [Header("SFX")]
+    [SerializeField] private AudioClip _shootSFX;
+    [SerializeField] private AudioSource _audioSource;
+
     private Camera _mainCamera;
     private float _fireCooldown = 0f;
 
@@ -60,6 +64,11 @@ public class PlayerAimAndShoot : MonoBehaviour
 
     private void Shoot()
     {
+        // Reproducir sonido de disparo
+        if (_audioSource != null && _shootSFX != null)
+        {
+            _audioSource.PlayOneShot(_shootSFX);
+        }
         Instantiate(
             _bulletPrefab,
             _bulletSpawnPoint.position,

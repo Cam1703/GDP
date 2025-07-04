@@ -100,6 +100,12 @@ public class MenuManager : MonoBehaviour
         StartCoroutine(waiter());
     }
 
+    public void OnLeaderboardButton()
+    {
+        instance._forwardSound.Play();
+        SceneManager.LoadScene(3);
+    }
+
     IEnumerator waiter()
     {
         //yield return new WaitForEndOfFrame();

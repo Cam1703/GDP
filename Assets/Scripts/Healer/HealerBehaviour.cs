@@ -44,4 +44,6 @@ public class HealerBehaviour : MonoBehaviour
         yield return new WaitForSeconds(timeToDestroy);
         Destroy(gameObject);
     }
+
+   
 }

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8036579731042807422}
   - component: {fileID: 2168992320151370871}
+  - component: {fileID: 4530053231126463595}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -44,6 +45,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29d4f3b948ada4b4791f1755fe737deb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab1: {fileID: 3291869931354271891, guid: 5b6614aac2eada445bb77d4eab7b06c4, type: 3}
-  enemyPrefab2: {fileID: 6263248658013582101, guid: fc6a8e7a70a1bea4b835830fade0164f, type: 3}
+  enemyPrefabs:
+  - {fileID: 5634765612066231972, guid: 391a791822a6d654dbc14a89ab4f2cce, type: 3}
+  - {fileID: 6263248658013582101, guid: fc6a8e7a70a1bea4b835830fade0164f, type: 3}
   spawnRate: 2
+  minSpawnRate: 0.8
+  maxSpawnRate: 4
+  rateAdjustInterval: 10
+  spawnRateDelta: -0.2
+--- !u!114 &4530053231126463595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9096633349628278785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe2767fff0ec3744590aa16f3005184d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healerPrefab: {fileID: 8809576790881762004, guid: 37bcd091a9fa57b4d9a87f2e64d723fe, type: 3}
+  spawnInterval: 5
+  minDistanceFromPlayer: 2
+  secondsUntilSpawn: 5

@@ -1,91 +1,112 @@
+using System.Collections;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public GameObject enemyPrefab1;
-    public GameObject enemyPrefab2;
-    public float spawnRate = 2f;
+    [Header("Prefabs de enemigos (al menos 1)")]
+    [SerializeField] private GameObject[] enemyPrefabs;
 
-    private float minSpawnRate = 0.5f;
-    private float maxSpawnRate = 3f;
-    private float spawnRateChangeInterval = 5f; // cada cuántos segundos cambia el spawnRate
-    private float spawnRateDelta = -0.2f; // al principio disminuirá
+    [Header("Parámetros de spawn")]
+    [Tooltip("Tiempo inicial entre spawns (segundos)")]
+    [SerializeField] private float spawnRate = 2f;
+    [SerializeField] private float minSpawnRate = 0.8f;
+    [SerializeField] private float maxSpawnRate = 4f;
+    [Tooltip("Intervalo para ajustar el spawn rate (segundos)")]
+    [SerializeField] private float rateAdjustInterval = 10f;
+    [Tooltip("Delta inicial de cambio de spawnRate")]
+    [SerializeField] private float spawnRateDelta = -0.2f;
 
     private Camera mainCamera;
+    private float padding = 0.1f;
+    private float nearClip;
 
-    void Start()
+    private void Awake()
     {
+        // Cacheamos la cámara y valores constantes
         mainCamera = Camera.main;
-        InvokeRepeating("SpawnEnemy", 0f, spawnRate);
-        InvokeRepeating("AdjustSpawnRate", spawnRateChangeInterval, spawnRateChangeInterval);
+        if (mainCamera == null)
+            Debug.LogError("[EnemySpawner] No se encontró Camera.main en la escena.");
+
+        nearClip = mainCamera != null ? mainCamera.nearClipPlane : 0f;
     }
 
-    void SpawnEnemy()
+    private void Start()
     {
-        int edge = Random.Range(0, 4); // 0:Norte, 1:Sur, 2:Este, 3:Oeste
-        Vector3 spawnPosition = CalcularPosicionSpawn(edge);
+        if (enemyPrefabs == null || enemyPrefabs.Length == 0)
+        {
+            Debug.LogError("[EnemySpawner] Debes asignar al menos un prefab en 'enemyPrefabs'.");
+            enabled = false;
+            return;
+        }
+
+        // Iniciar corutinas
+        StartCoroutine(SpawnLoop());
+        StartCoroutine(AdjustRateLoop());
+    }
+
+    private IEnumerator SpawnLoop()
+    {
+        while (true)
+        {
+            SpawnEnemy();
+            yield return new WaitForSeconds(spawnRate);
+        }
+    }
+
+    private IEnumerator AdjustRateLoop()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(rateAdjustInterval);
+
+            spawnRate += spawnRateDelta;
+            if (spawnRate <= minSpawnRate || spawnRate >= maxSpawnRate)
+            {
+                spawnRateDelta = -spawnRateDelta;
+                spawnRate = Mathf.Clamp(spawnRate, minSpawnRate, maxSpawnRate);
+            }
+        }
+    }
+
+    private void SpawnEnemy()
+    {
+        // Elegir borde de spawn y posición
+        int edge = Random.Range(0, 4);
+        Vector3 spawnPos = GetSpawnPosition(edge);
 
         // Instanciar prefab aleatorio
-        GameObject chosenPrefab = (Random.Range(0, 2) == 0) ? enemyPrefab1 : enemyPrefab2;
-        GameObject enemy = Instantiate(chosenPrefab, spawnPosition, Quaternion.identity);
+        var prefab = enemyPrefabs[Random.Range(0, enemyPrefabs.Length)];
+        var enemy = Instantiate(prefab, spawnPos, Quaternion.identity);
 
-        // Configurar dirección según borde
-        EnemigoMovimientoPeriodico2D movimiento = enemy.GetComponent<EnemigoMovimientoPeriodico2D>();
-        if (movimiento != null)
+        // Ajustar dirección si contiene el componente
+        if (enemy.TryGetComponent<EnemigoMovimientoPeriodico2D>(out var movimiento))
         {
-            movimiento.direccion = ObtenerDireccionPorBorde(edge);
+            movimiento.direccion = GetDirectionForEdge(edge);
         }
     }
 
-    void AdjustSpawnRate()
+    private Vector3 GetSpawnPosition(int edge)
     {
-        spawnRate += spawnRateDelta;
-
-        if (spawnRate <= minSpawnRate || spawnRate >= maxSpawnRate)
+        Vector3 vp = edge switch
         {
-            // Invertir la dirección del cambio
-            spawnRateDelta *= -1;
-            spawnRate = Mathf.Clamp(spawnRate, minSpawnRate, maxSpawnRate);
-        }
-
-        // Reiniciar el InvokeRepeating con el nuevo spawnRate
-        CancelInvoke("SpawnEnemy");
-        InvokeRepeating("SpawnEnemy", 0f, spawnRate);
+            0 => new Vector3(Random.value, 1 + padding, nearClip),     // Norte
+            1 => new Vector3(Random.value, -padding, nearClip),        // Sur
+            2 => new Vector3(1 + padding, Random.value, nearClip),     // Este
+            3 => new Vector3(-padding, Random.value, nearClip),        // Oeste
+            _ => Vector3.zero
+        };
+        return mainCamera.ViewportToWorldPoint(vp);
     }
 
-    Vector3 CalcularPosicionSpawn(int borde)
+    private Vector2 GetDirectionForEdge(int edge)
     {
-        Vector3 viewportPoint = Vector3.zero;
-        float padding = 0.1f; // Margen fuera de pantalla
-
-        switch (borde)
+        return edge switch
         {
-            case 0: // Norte
-                viewportPoint = new Vector3(Random.Range(0f, 1f), 1 + padding, mainCamera.nearClipPlane);
-                break;
-            case 1: // Sur
-                viewportPoint = new Vector3(Random.Range(0f, 1f), -padding, mainCamera.nearClipPlane);
-                break;
-            case 2: // Este
-                viewportPoint = new Vector3(1 + padding, Random.Range(0f, 1f), mainCamera.nearClipPlane);
-                break;
-            case 3: // Oeste
-                viewportPoint = new Vector3(-padding, Random.Range(0f, 1f), mainCamera.nearClipPlane);
-                break;
-        }
-
-        return mainCamera.ViewportToWorldPoint(viewportPoint);
-    }
-
-    Vector2 ObtenerDireccionPorBorde(int borde)
-    {
-        return borde switch
-        {
-            0 => Vector2.down,    // Norte -> Sur
-            1 => Vector2.up,      // Sur -> Norte
-            2 => Vector2.left,    // Este -> Oeste
-            3 => Vector2.right,   // Oeste -> Este
-            _ => Vector2.right
+            0 => Vector2.down,
+            1 => Vector2.up,
+            2 => Vector2.left,
+            3 => Vector2.right,
+            _ => Vector2.zero
         };
     }
 }

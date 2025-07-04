@@ -1,39 +1,78 @@
-using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerAimAndShoot : MonoBehaviour
 {
-
+    [Header("Referencias")]
     [SerializeField] private GameObject _gun;
-    [SerializeField] private GameObject _bullet;
+    [SerializeField] private GameObject _bulletPrefab;
     [SerializeField] private Transform _bulletSpawnPoint;
 
-    private GameObject _bulletInst;
+    [Header("Fire Settings")]
+    [Tooltip("Segundos entre disparos cuando se mantiene pulsado")]
+    [SerializeField] private float fireRate = 0.2f;
 
-    private Vector2 _worldMousePosition;
-    private Vector2 _direction;
+    [Header("SFX")]
+    [SerializeField] private AudioClip _shootSFX;
+    [SerializeField] private AudioSource _audioSource;
 
-    // Update is called once per frame
+    private Camera _mainCamera;
+    private float _fireCooldown = 0f;
+
+    void Awake()
+    {
+        _mainCamera = Camera.main;
+        if (_mainCamera == null)
+            Debug.LogError("[PlayerAimAndShoot] No se encontró Camera.main en la escena.");
+    }
+
     void Update()
     {
-        GunRotation();
-        GunShooting();
+        AimGun();
+        HandleShooting();
     }
 
-    private void GunRotation()
+    private void AimGun()
     {
-        //Rotate the gun towards the mouse position
-        _worldMousePosition = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-        _direction = (_worldMousePosition - (Vector2)_gun.transform.position).normalized;
-        _gun.transform.right = _direction;
+        // Obtener posición del ratón en mundo
+        Vector2 mousePos = _mainCamera.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+        // Calcular dirección y rotar la pistola
+        Vector2 dir = (mousePos - (Vector2)_gun.transform.position).normalized;
+        _gun.transform.right = dir;
     }
 
-    private void GunShooting()
+    private void HandleShooting()
     {
-        if (InputManager.attack)
+        // Decrementar el cooldown
+        _fireCooldown -= Time.deltaTime;
+
+        // Usamos el flag de “held” en lugar de WasPerformedThisFrame
+        if (InputManager.attackHeld)
         {
-            _bulletInst = Instantiate(_bullet, _bulletSpawnPoint.position, _gun.transform.rotation);
-        }    
+            if (_fireCooldown <= 0f)
+            {
+                Shoot();
+                _fireCooldown = fireRate;
+            }
+        }
+        else
+        {
+            _fireCooldown = 0f;
+        }
+    }
+
+
+    private void Shoot()
+    {
+        // Reproducir sonido de disparo
+        if (_audioSource != null && _shootSFX != null)
+        {
+            _audioSource.PlayOneShot(_shootSFX);
+        }
+        Instantiate(
+            _bulletPrefab,
+            _bulletSpawnPoint.position,
+            _gun.transform.rotation
+        );
     }
 }

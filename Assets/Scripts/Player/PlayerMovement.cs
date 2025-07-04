@@ -7,6 +7,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float _dashSpeed = 15f;
     [SerializeField] private float _dashDuration = 0.5f;
     [SerializeField] private float _dashCooldown = 1f;
+    [SerializeField] AudioClip _dashSound;
+    [SerializeField] AudioSource _audioSource;
 
     private Vector2 _movement;
     private bool _isDashing = false;
@@ -20,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
     private SpriteRenderer _spriteRenderer;
     private BoxCollider2D _collider;
+
     void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -39,7 +42,10 @@ public class PlayerMovement : MonoBehaviour
             _isDashing = true;
             _dashTimeLeft = _dashDuration;
             _lastDashTime = Time.time;
+
+            _audioSource.PlayOneShot(_dashSound); //Reproducir sonido al inicio del dash
         }
+
         if (_isDashing)
         {
             _rb.linearVelocity = _movement.normalized * _dashSpeed;

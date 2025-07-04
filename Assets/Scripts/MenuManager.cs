@@ -56,6 +56,10 @@ public class MenuManager : MonoBehaviour
             instance._hasStarted = true;
             instance._startMenu.SetActive(false);
             instance._game.SetActive(true);
+
+            GameObject playerObj = instance._game.transform.Find("Player").gameObject;
+            playerObj.SetActive(true);
+
             instance._startSound.Play();
             instance._gameLoop.PlayDelayed(0);
             
@@ -98,15 +102,19 @@ public class MenuManager : MonoBehaviour
 
     IEnumerator waiter()
     {
-        yield return new WaitForSecondsRealtime(0.1f);
+        //yield return new WaitForEndOfFrame();
+        //yield return new WaitForEndOfFrame();
+        while (GameObject.Find("GameProper") == null || GameObject.Find("Menu") == null)
+        {
+            yield return null;
+        }
+
         instance._startMenu = GameObject.Find("StartContainer");
-        instance._pauseMenu = GameObject.Find("PauseContainer");
+        instance._pauseMenu = GameObject.Find("Menu").transform.Find("PauseContainer").gameObject;
         instance._game = GameObject.Find("GameProper");
 
-        instance._startMenu.SetActive(true);
-        instance._game.SetActive(false);
-        instance._pauseMenu.SetActive(false);
     }
+
     public void OnMenuButton()
     {
         instance._gameLoop.Stop();

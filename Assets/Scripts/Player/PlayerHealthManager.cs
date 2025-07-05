@@ -8,7 +8,7 @@ public class PlayerHealthManager : MonoBehaviour
     public int health;
     public AudioSource _damageSound;
     public AudioClip[] _damageClips;
-
+    [SerializeField] private AudioClip[] healClips; // Array of healing sound clips 
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -45,6 +45,11 @@ public class PlayerHealthManager : MonoBehaviour
 
     public void Heal(int amount)
     {
+        if (healClips != null && healClips.Length > 0)
+        {
+            int randomIndex = Random.Range(0, healClips.Length);
+            _damageSound.PlayOneShot(healClips[randomIndex]);
+        }
         instance.health += amount;
         if (instance.health > maxHealth)
         {

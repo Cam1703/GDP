@@ -5,6 +5,7 @@ public class HealerBehaviour : MonoBehaviour
 {
     [SerializeField] private int healAmount = 1;
     [SerializeField] private int timeToDestroy = 5; // Time in seconds before the healer is destroyed
+
     private GameObject player;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

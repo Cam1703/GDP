@@ -1431,9 +1431,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 5f96df2409eea2b49b80043fde680829, type: 3}
     - target: {fileID: 8704796361355927931, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
+      propertyPath: healClips.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8704796361355927931, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
       propertyPath: _damageClips.Array.size
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8704796361355927931, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
+      propertyPath: 'healClips.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 607bddf33df86ec44a695407b7595edd, type: 3}
+    - target: {fileID: 8704796361355927931, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
+      propertyPath: 'healClips.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 4fb33efc952946f4e8fcf17815084721, type: 3}
     - target: {fileID: 8704796361355927931, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
       propertyPath: '_damageClips.Array.data[0]'
       value: 

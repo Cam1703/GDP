@@ -14,6 +14,7 @@ public class EnemigoDisparador : MonoBehaviour
     [SerializeField] private AudioClip sonidoDisparo;
     [SerializeField] private AudioSource audioSource;
 
+    private Camera mainCamera;
     void Start()
     {
         // Obtener referencia al script de movimiento
@@ -23,10 +24,15 @@ public class EnemigoDisparador : MonoBehaviour
         {
             Debug.LogError("No se encontró el script de movimiento en el enemigo!");
         }
+
+        mainCamera = Camera.main;
+        if (mainCamera == null)
+            Debug.LogError("[Enemigo_Disparo] No se encontró Camera.main en la escena.");
     }
 
     void Update()
     {
+
         temporizadorDisparo -= Time.deltaTime;
 
         if (temporizadorDisparo <= 0f)
@@ -39,6 +45,15 @@ public class EnemigoDisparador : MonoBehaviour
     void Disparar()
     {
         if (movimientoEnemigo == null) return;
+        if (mainCamera == null) return;
+
+        // Comprobar si el enemigo está dentro del campo de visión de la cámara
+        Vector3 viewportPos = mainCamera.WorldToViewportPoint(transform.position);
+        bool dentroDeCamara = viewportPos.x >= 0f && viewportPos.x <= 1f &&
+                              viewportPos.y >= 0f && viewportPos.y <= 1f &&
+                              viewportPos.z > 0f;
+
+        if (!dentroDeCamara) return;
 
         // Instanciar y configurar dirección del proyectil
         GameObject proyectil = Instantiate(
@@ -70,4 +85,5 @@ public class EnemigoDisparador : MonoBehaviour
             Debug.LogWarning("El prefab del proyectil no tiene componente Proyectil!");
         }
     }
+
 }

@@ -22,11 +22,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5348906138169740389, guid: 5b6614aac2eada445bb77d4eab7b06c4, type: 3}
       propertyPath: Priority
-      value: 50
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 5348906138169740389, guid: 5b6614aac2eada445bb77d4eab7b06c4, type: 3}
       propertyPath: m_Volume
-      value: 0.6
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 5348906138169740389, guid: 5b6614aac2eada445bb77d4eab7b06c4, type: 3}
       propertyPath: m_PlayOnAwake
@@ -40,6 +40,18 @@ PrefabInstance:
       propertyPath: sonidoDisparo
       value: 
       objectReference: {fileID: 8300000, guid: 08dd799f6a69ec4428763f7844b432fa, type: 3}
+    - target: {fileID: 6849640942425211490, guid: 5b6614aac2eada445bb77d4eab7b06c4, type: 3}
+      propertyPath: sonidoDisparos.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6849640942425211490, guid: 5b6614aac2eada445bb77d4eab7b06c4, type: 3}
+      propertyPath: 'sonidoDisparos.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 08dd799f6a69ec4428763f7844b432fa, type: 3}
+    - target: {fileID: 6849640942425211490, guid: 5b6614aac2eada445bb77d4eab7b06c4, type: 3}
+      propertyPath: 'sonidoDisparos.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 7680838d27912e04bb6d1ca0c3ba1c44, type: 3}
     - target: {fileID: 8350743212542161572, guid: 5b6614aac2eada445bb77d4eab7b06c4, type: 3}
       propertyPath: m_Controller
       value: 

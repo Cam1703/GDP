@@ -11,7 +11,7 @@ public class EnemigoDisparador : MonoBehaviour
     private EnemigoMovimientoPeriodico2D movimientoEnemigo; // Referencia al script de movimiento
 
     [Header("SFX")]
-    [SerializeField] private AudioClip sonidoDisparo;
+    [SerializeField] private AudioClip[] sonidoDisparos;
     [SerializeField] private AudioSource audioSource;
 
     private Camera mainCamera;
@@ -75,8 +75,9 @@ public class EnemigoDisparador : MonoBehaviour
             float angulo = Mathf.Atan2(direccionDisparo.y, direccionDisparo.x) * Mathf.Rad2Deg;
             proyectil.transform.rotation = Quaternion.AngleAxis(angulo, Vector3.forward);
             // Reproducir sonido de disparo
-            if (audioSource != null && sonidoDisparo != null)
+            if (audioSource != null && sonidoDisparos != null)
             {
+                AudioClip sonidoDisparo = sonidoDisparos[Random.Range(0, sonidoDisparos.Length)];
                 audioSource.PlayOneShot(sonidoDisparo);
             }
         }

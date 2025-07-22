@@ -12,12 +12,17 @@ public class PlayerAimAndShoot : MonoBehaviour
     [Tooltip("Segundos entre disparos cuando se mantiene pulsado")]
     [SerializeField] private float fireRate = 0.2f;
 
+    [Header ("PowerUps")]
+    [SerializeField] private bool _hasTrippleShot = false;
+
     [Header("SFX")]
     [SerializeField] private AudioClip _shootSFX;
     [SerializeField] private AudioSource _audioSource;
 
     private Camera _mainCamera;
     private float _fireCooldown = 0f;
+
+    public bool HasTrippleShot { get => _hasTrippleShot; set => _hasTrippleShot = value; }
 
     void Awake()
     {
@@ -69,10 +74,16 @@ public class PlayerAimAndShoot : MonoBehaviour
         {
             _audioSource.PlayOneShot(_shootSFX);
         }
-        Instantiate(
-            _bulletPrefab,
-            _bulletSpawnPoint.position,
-            _gun.transform.rotation
-        );
+
+        Instantiate(_bulletPrefab, _bulletSpawnPoint.position, _gun.transform.rotation);
+        if (_hasTrippleShot) TrippleShot();
     }
+
+    private void TrippleShot()
+    {
+        Instantiate(_bulletPrefab, _bulletSpawnPoint.position, Quaternion.Euler(0, 0, 15) * _gun.transform.rotation);
+        Instantiate(_bulletPrefab, _bulletSpawnPoint.position, Quaternion.Euler(0, 0, -15) * _gun.transform.rotation);
+    }
+
+
 }

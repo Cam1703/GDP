@@ -32,7 +32,7 @@ public class PowerupSpawn : MonoBehaviour
     private IEnumerator SpawnLoopAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
-        InvokeRepeating(nameof(SpawnPowerup), 0f, spawnInterval);
+        InvokeRepeating(nameof(SpawnPowerup), 0f, Random.Range(spawnInterval, spawnInterval+10));
     }
 
     private void SpawnPowerup()

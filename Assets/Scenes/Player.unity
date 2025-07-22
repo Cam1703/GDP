@@ -5621,7 +5621,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9185482850626467188, guid: 50131ed6e751d7840a5068f584b3021d, type: 3}
       propertyPath: spawnInterval
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 9185482850626467188, guid: 50131ed6e751d7840a5068f584b3021d, type: 3}
       propertyPath: initialSpawnDelay

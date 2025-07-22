@@ -59,11 +59,11 @@ public class EnemigoMovimientoPeriodico2D : MonoBehaviour
         {
             contadorMovimiento += Time.deltaTime;
             MoverEnemigo();
-            if (contadorMovimiento >= duracionMovimiento)
-            {
-                estaMoviendose = false;
-                DetenerEnemigo();
-            }
+            //if (contadorMovimiento >= duracionMovimiento)
+            //{
+            //    estaMoviendose = false;
+            //    DetenerEnemigo();
+            //}
         }
     }
 

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8036579731042807422}
   - component: {fileID: 2168992320151370871}
+  - component: {fileID: 9185482850626467188}
   - component: {fileID: 4530053231126463595}
   m_Layer: 0
   m_Name: Spawner
@@ -49,10 +50,27 @@ MonoBehaviour:
   - {fileID: 5634765612066231972, guid: 391a791822a6d654dbc14a89ab4f2cce, type: 3}
   - {fileID: 6263248658013582101, guid: fc6a8e7a70a1bea4b835830fade0164f, type: 3}
   spawnRate: 2
-  minSpawnRate: 0.8
-  maxSpawnRate: 4
+  minSpawnRate: 0.5
+  maxSpawnRate: 3
   rateAdjustInterval: 10
-  spawnRateDelta: -0.2
+  spawnRateDelta: -0.3
+--- !u!114 &9185482850626467188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9096633349628278785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dfcc95dd6342fc4e83fed98870bf2d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerupPrefabList:
+  - {fileID: 5472466633897017544, guid: 0b7f22873af2a1a4d9bdfa4a12daf169, type: 3}
+  spawnInterval: 5
+  minDistanceFromPlayer: 2
+  initialSpawnDelay: 5
 --- !u!114 &4530053231126463595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68,4 +86,4 @@ MonoBehaviour:
   healerPrefab: {fileID: 8809576790881762004, guid: 37bcd091a9fa57b4d9a87f2e64d723fe, type: 3}
   spawnInterval: 5
   minDistanceFromPlayer: 2
-  secondsUntilSpawn: 5
+  initialSpawnDelay: 5

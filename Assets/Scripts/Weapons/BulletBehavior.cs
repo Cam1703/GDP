@@ -20,7 +20,8 @@ public class BulletBehavior : MonoBehaviour
     {
         bool isPlayer = collision.gameObject.CompareTag("Player");
         bool isHealth = collision.gameObject.CompareTag("Healer");
-        if (!isPlayer && !isHealth)
+        bool isBullet = collision.gameObject.CompareTag("Bullet");
+        if (!isPlayer && !isHealth && !isBullet)
         {
             Destroy(gameObject);
             if (collision.gameObject.CompareTag("Enemy"))

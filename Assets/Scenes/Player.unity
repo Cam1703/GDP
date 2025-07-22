@@ -1469,6 +1469,7 @@ PrefabInstance:
     - {fileID: 7573344785903988244, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
     - {fileID: 7465066852406902395, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
     - {fileID: 1231496510744083321, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
+    - {fileID: 798749340988297428, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6935983416921092202, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
@@ -5617,6 +5618,14 @@ PrefabInstance:
     - target: {fileID: 9096633349628278785, guid: 50131ed6e751d7840a5068f584b3021d, type: 3}
       propertyPath: m_Name
       value: Spawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 9185482850626467188, guid: 50131ed6e751d7840a5068f584b3021d, type: 3}
+      propertyPath: spawnInterval
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 9185482850626467188, guid: 50131ed6e751d7840a5068f584b3021d, type: 3}
+      propertyPath: initialSpawnDelay
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

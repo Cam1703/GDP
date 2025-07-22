@@ -2,19 +2,18 @@ using UnityEngine;
 
 public class EnemigoMovimientoPeriodico2D : MonoBehaviour
 {
-
-    [Header("Configuraci?n de Movimiento")]
+    [Header("Configuración de Movimiento")]
     [Tooltip("Velocidad a la que se mueve el enemigo")]
     public float velocidad = 5.0f;
 
-    [Tooltip("Direcci?n en la que se mover? el enemigo")]
-    public Vector2 direccion = Vector2.right; // Por defecto se mueve hacia la derecha (1,0)
+    [Tooltip("Dirección en la que se moverá el enemigo")]
+    public Vector2 direccion = Vector2.right;
 
-    [Header("Configuraci?n de Tiempo")]
+    [Header("Configuración de Tiempo")]
     [Tooltip("Tiempo entre movimientos (en segundos)")]
     public float tiempoEntreMov = 2.0f;
 
-    [Tooltip("Duraci?n de cada movimiento (en segundos)")]
+    [Tooltip("Duración de cada movimiento (en segundos)")]
     public float duracionMovimiento = 1.0f;
 
     private float contadorTiempo = 0.0f;
@@ -25,53 +24,41 @@ public class EnemigoMovimientoPeriodico2D : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Animator animator;
 
-    private const string _horizontal = "Horizontal";
-    private const string _vertical = "Vertical";
-
-
+    // Parámetros del Animator
+    private const string PARAM_X = "Horizontal";
+    private const string PARAM_Y = "Vertical";
 
     private void Start()
     {
-
-        // Mantén el resto del código original
         rb2d = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+
         contadorTiempo = 0;
 
-        // Normaliza la dirección aquí si es necesario
+        // Normaliza la dirección
         direccion = direccion.normalized;
     }
 
     void Update()
     {
-
-        animator.SetFloat(_horizontal,direccion.x);
-        animator.SetFloat(_vertical, direccion.y);
+        // Actualizar parámetros del Animator basado en el estado actual
+        UpdateAnimatorParameters();
 
         if (!estaMoviendose)
         {
             contadorTiempo += Time.deltaTime;
-
             if (contadorTiempo >= tiempoEntreMov)
             {
                 contadorTiempo = 0;
-
                 estaMoviendose = true;
                 contadorMovimiento = 0;
-
-                if (spriteRenderer != null)
-                {
-                    spriteRenderer.flipX = (direccion.x < 0);
-                }
             }
         }
         else
         {
             contadorMovimiento += Time.deltaTime;
-
             MoverEnemigo();
-
             if (contadorMovimiento >= duracionMovimiento)
             {
                 estaMoviendose = false;
@@ -79,6 +66,69 @@ public class EnemigoMovimientoPeriodico2D : MonoBehaviour
             }
         }
     }
+
+    private void UpdateAnimatorParameters()
+    {
+        if (animator != null)
+        {
+            if (estaMoviendose)
+            {
+                // Mapear la dirección del movimiento a los parámetros del Blend Tree
+                // Según tu Blend Tree:
+                // Walk_Right: Pos X = -1, Pos Y = 0 (movimiento hacia la derecha)
+                // Walk_Left: Pos X = 1, Pos Y = 0 (movimiento hacia la izquierda)
+                // Walk_Up: Pos X = 0, Pos Y = 1 (movimiento hacia arriba)
+                // Walk_Down: Pos X = 0, Pos Y = -1 (movimiento hacia abajo)
+
+                float animX = 0f;
+                float animY = 0f;
+
+                // Determinar la dirección principal basada en la dirección de movimiento
+                if (Mathf.Abs(direccion.x) > Mathf.Abs(direccion.y))
+                {
+                    // Movimiento principalmente horizontal
+                    if (direccion.x > 0)
+                    {
+                        // Movimiento hacia la derecha
+                        animX = -1f;
+                        animY = 0f;
+                    }
+                    else
+                    {
+                        // Movimiento hacia la izquierda
+                        animX = 1f;
+                        animY = 0f;
+                    }
+                }
+                else
+                {
+                    // Movimiento principalmente vertical
+                    if (direccion.y > 0)
+                    {
+                        // Movimiento hacia arriba
+                        animX = 0f;
+                        animY = 1f;
+                    }
+                    else
+                    {
+                        // Movimiento hacia abajo
+                        animX = 0f;
+                        animY = -1f;
+                    }
+                }
+
+                animator.SetFloat(PARAM_X, animX);
+                animator.SetFloat(PARAM_Y, animY);
+            }
+            else
+            {
+                // Cuando está quieto, parámetros en 0 (idle)
+                animator.SetFloat(PARAM_X, 0f);
+                animator.SetFloat(PARAM_Y, 0f);
+            }
+        }
+    }
+
     private void MoverEnemigo()
     {
         if (rb2d != null)
@@ -104,30 +154,28 @@ public class EnemigoMovimientoPeriodico2D : MonoBehaviour
         Gizmos.color = Color.red;
         Vector3 dir3D = new Vector3(direccion.x, direccion.y, 0);
         Gizmos.DrawRay(transform.position, dir3D.normalized * 2);
+
+        // Mostrar estado actual
+        if (Application.isPlaying)
+        {
+            Gizmos.color = estaMoviendose ? Color.green : Color.yellow;
+            Gizmos.DrawWireSphere(transform.position, 0.3f);
+        }
     }
 
     public void SetDireccion(Vector2 nuevaDireccion)
     {
         direccion = nuevaDireccion.normalized;
-
-        // Actualiza flip del sprite
-        if (spriteRenderer != null)
-        {
-            spriteRenderer.flipX = (direccion.x < 0);
-        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //Debug.Log("Collision detected with: " + collision.gameObject.name);
         if (collision.gameObject.CompareTag("Player"))
         {
-            // Trigger game over or player damage
-
             PlayerHealthManager playerHealth = collision.gameObject.GetComponent<PlayerHealthManager>();
             if (playerHealth != null)
             {
-                playerHealth.TakeDamage(1); // Call the TakeDamage method on the player
+                playerHealth.TakeDamage(1);
             }
             else
             {

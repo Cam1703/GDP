@@ -85,7 +85,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: -633882114, guid: 16156d57a537237459b730aabfbffa7e, type: 3}
-  m_Color: {r: 0.73333335, g: 0.73333335, b: 0.73333335, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -200,7 +200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 2
-  _damageSound: {fileID: 5348906138169740389}
+  _deathSound: {fileID: 5348906138169740389}
 --- !u!95 &8350743212542161572
 Animator:
   serializedVersion: 7

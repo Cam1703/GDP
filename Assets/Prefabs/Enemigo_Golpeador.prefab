@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
-  _damageSound: {fileID: 7164284143282525219}
+  _deathSound: {fileID: 7164284143282525219}
 --- !u!58 &4560310620616033972
 CircleCollider2D:
   m_ObjectHideFlags: 0

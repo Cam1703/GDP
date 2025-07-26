@@ -36,6 +36,19 @@ public class GameManager : MonoBehaviour
         if (!MainManager.pauseManager.isPaused)
         {
             instance.playerScore += Time.deltaTime;
+            // Actualiza el marcador cada 0.2 segundos usando un acumulador
+            if (!Mathf.Approximately(instance.playerScore, 0f) && Mathf.FloorToInt(instance.playerScore * 5) != Mathf.FloorToInt((instance.playerScore - Time.deltaTime) * 5))
+            {
+                MainManager.uiManager.UpdateScore();
+            }
+        }
+    }
+
+    public void UpdateScore(float points)
+    {
+        if (!MainManager.pauseManager.isPaused)
+        {
+            instance.playerScore += points;
             MainManager.uiManager.UpdateScore();
         }
     }

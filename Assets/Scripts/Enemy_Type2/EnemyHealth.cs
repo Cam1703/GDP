@@ -18,6 +18,7 @@ public class EnemyHealth : MonoBehaviour
 
         if (health <= 0)
         {
+            GameManager.instance.UpdateScore(10f); // Update score when enemy is destroyed
             AudioSource.PlayClipAtPoint(_damageSound.clip,transform.position);
             Destroy(gameObject);
         }

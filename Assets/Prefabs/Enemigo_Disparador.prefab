@@ -183,8 +183,10 @@ MonoBehaviour:
   prefabProyectil: {fileID: 8747876099890101869, guid: 827eebf6eb489c640a157eddea760845, type: 3}
   puntoDisparo: {fileID: 2532162946301244380}
   cadenciaDisparo: 2
-  sonidoDisparos: []
-  audioSource: {fileID: 0}
+  sonidoDisparos:
+  - {fileID: 8300000, guid: 7680838d27912e04bb6d1ca0c3ba1c44, type: 3}
+  - {fileID: 8300000, guid: 08dd799f6a69ec4428763f7844b432fa, type: 3}
+  audioSource: {fileID: 5348906138169740389}
 --- !u!114 &-3866875138713521699
 MonoBehaviour:
   m_ObjectHideFlags: 0

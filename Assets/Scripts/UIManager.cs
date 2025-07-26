@@ -73,7 +73,7 @@ public class UIManager : MonoBehaviour
 
     public void UpdateScore()
     {
-        _score.text = ("Score: " + MainManager.gameManager.playerScore.ToString("F3") + " s");
+        _score.text = ("Score: " + MainManager.gameManager.playerScore.ToString("F1"));
     }
 
 }

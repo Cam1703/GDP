@@ -83,6 +83,11 @@ public class PlayerAimAndShoot : MonoBehaviour
     {
         Instantiate(_bulletPrefab, _bulletSpawnPoint.position, Quaternion.Euler(0, 0, 15) * _gun.transform.rotation);
         Instantiate(_bulletPrefab, _bulletSpawnPoint.position, Quaternion.Euler(0, 0, -15) * _gun.transform.rotation);
+        if (_audioSource != null && _shootSFX != null)
+        {
+            _audioSource.PlayOneShot(_shootSFX);
+            _audioSource.PlayOneShot(_shootSFX);
+        }
     }
 
 

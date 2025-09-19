@@ -1651,7 +1651,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 988e33e7fd87d8b439d2e10e7a3fe406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cursorTexture: {fileID: 2800000, guid: c9eecbebc2f28f94488fbbf662912f1a, type: 3}
+  defaultAnimation:
+    cursorFrames:
+    - {fileID: 8317201510437776739, guid: 2aa905ab1bdf21246b9b6d595d12f9ff, type: 3}
+    - {fileID: -1854579109, guid: 2aa905ab1bdf21246b9b6d595d12f9ff, type: 3}
+    frameRatio: 0.1
+    objectTags: []
+  animations:
+  - cursorFrames:
+    - {fileID: -1854579109, guid: 2aa905ab1bdf21246b9b6d595d12f9ff, type: 3}
+    - {fileID: -1185562359, guid: 2aa905ab1bdf21246b9b6d595d12f9ff, type: 3}
+    frameRatio: 0.1
+    objectTags:
+    - Enemies
+    - Enemy
+  interactableLayers:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!4 &903825868
 Transform:
   m_ObjectHideFlags: 0

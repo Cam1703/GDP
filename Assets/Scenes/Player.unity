@@ -1083,6 +1083,22 @@ PrefabInstance:
       value: 2.1
       objectReference: {fileID: 0}
     - target: {fileID: 2991735933484066677, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
+      propertyPath: m_Size.x
+      value: 0.6179348
+      objectReference: {fileID: 0}
+    - target: {fileID: 2991735933484066677, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
+      propertyPath: m_Size.y
+      value: 0.98800766
+      objectReference: {fileID: 0}
+    - target: {fileID: 2991735933484066677, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.016247451
+      objectReference: {fileID: 0}
+    - target: {fileID: 2991735933484066677, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.090349734
+      objectReference: {fileID: 0}
+    - target: {fileID: 2991735933484066677, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.x
       value: 0.5
       objectReference: {fileID: 0}
@@ -1430,6 +1446,14 @@ PrefabInstance:
       propertyPath: _damageClip
       value: 
       objectReference: {fileID: 8300000, guid: 5f96df2409eea2b49b80043fde680829, type: 3}
+    - target: {fileID: 8704796361355927931, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
+      propertyPath: blinkInterval
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8704796361355927931, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
+      propertyPath: invulnerabilityTime
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8704796361355927931, guid: f4611d19206b6954aa8b68026bafc61f, type: 3}
       propertyPath: healClips.Array.size
       value: 2

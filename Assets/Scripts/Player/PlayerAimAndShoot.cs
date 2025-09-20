@@ -52,7 +52,7 @@ public class PlayerAimAndShoot : MonoBehaviour
         _fireCooldown -= Time.deltaTime;
 
         // Usamos el flag de “held” en lugar de WasPerformedThisFrame
-        if (InputManager.attackHeld)
+        if (InputManager.attackHeld && !MainManager.pauseManager.isPaused)
         {
             if (_fireCooldown <= 0f)
             {

@@ -122,8 +122,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ebaa675949211147a78b64debe17369, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _filledHeart: {fileID: 2069008808, guid: dc5165da4357de9409a50ed00422a4c8, type: 3}
-  _emptyHeart: {fileID: -1608911076, guid: dc5165da4357de9409a50ed00422a4c8, type: 3}
+  _filledHeart: {fileID: 4365546165440868901, guid: 3ebf849cdd843d54cb85e6b83f012ab0, type: 3}
+  _emptyHeart: {fileID: -5371385760970010092, guid: 3ebf849cdd843d54cb85e6b83f012ab0, type: 3}
 --- !u!1 &1848118875679497202
 GameObject:
   m_ObjectHideFlags: 0

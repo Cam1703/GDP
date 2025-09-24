@@ -18,6 +18,7 @@ public class PlayerAimAndShoot : MonoBehaviour
     [Header("SFX")]
     [SerializeField] private AudioClip _shootSFX;
     [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private AudioClip[] _tripeShotSFXList;
 
     private Camera _mainCamera;
     private float _fireCooldown = 0f;
@@ -85,8 +86,8 @@ public class PlayerAimAndShoot : MonoBehaviour
         Instantiate(_bulletPrefab, _bulletSpawnPoint.position, Quaternion.Euler(0, 0, -15) * _gun.transform.rotation);
         if (_audioSource != null && _shootSFX != null)
         {
-            _audioSource.PlayOneShot(_shootSFX);
-            _audioSource.PlayOneShot(_shootSFX);
+            var randomIndex = Random.Range(0, _tripeShotSFXList.Length);
+            _audioSource.PlayOneShot(_tripeShotSFXList[randomIndex]);
         }
     }
 

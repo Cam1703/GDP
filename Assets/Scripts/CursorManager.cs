@@ -86,14 +86,23 @@ public class CursorManager : MonoBehaviour
 
     Texture2D TexturizeSprite(Sprite sprite)
     {
-        Texture2D _newTexture = new Texture2D((int)sprite.textureRect.width, (int)sprite.textureRect.height, TextureFormat.RGBA32, false);
-        var _pixels = sprite.texture.GetPixels((int)sprite.textureRect.x,
-                                                    (int)sprite.textureRect.y,
-                                                    (int)sprite.textureRect.width,
-                                                    (int)sprite.textureRect.height);
+        Texture2D _newTexture = new Texture2D(
+            (int)sprite.textureRect.width,
+            (int)sprite.textureRect.height,
+            TextureFormat.RGBA32,
+            false
+        );
+
+        var _pixels = sprite.texture.GetPixels(
+            (int)sprite.textureRect.x,
+            (int)sprite.textureRect.y,
+            (int)sprite.textureRect.width,
+            (int)sprite.textureRect.height
+        );
+
         _newTexture.SetPixels(_pixels);
-        _newTexture.alphaIsTransparency = true;
         _newTexture.Apply();
         return _newTexture;
     }
+
 }
